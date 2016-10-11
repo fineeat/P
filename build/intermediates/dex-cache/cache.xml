@@ -88,7 +88,7 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="db891e3a1e917c1266049eb5d8cb81cae5ebce92">
+        sha1="39c0cb5099bb29d7455c086be5995603ca74c42c">
         <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_bf9f80132c6432b2c17ae2bd9f679c669714f84a\classes.dex" />
     </item>
     <item
@@ -115,7 +115,7 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="c82f4f55f4df1e0e6980e4ca70c59a1380d4aa0b">
+        sha1="1dbbf601f94d4810f0e14f9391a1dd1845143103">
         <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_740a83782ec39f0ff336f7a3b4c5ba58d2fded3e\classes.dex" />
     </item>
     <item

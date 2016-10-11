@@ -8,8 +8,7 @@ import android.support.v7.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
 
-    //cwz 11/10/16 Added to create tab test
-    //Created development branch
+    //cwz 11/10/16 Added to create tab
     Toolbar toolbar;
     TabLayout tabLayout;
     ViewPager viewPager;
