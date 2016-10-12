@@ -20,7 +20,6 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
 
     ArrayList<Fragment> fragments = new ArrayList<>();
     ArrayList<String> tabTitles = new ArrayList<>();
-    ArrayList<Integer> images = new ArrayList<>();
     Context context;
 
     public ViewPagerAdapter(Context con, FragmentManager fm) {
@@ -28,10 +27,9 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
         context = con;
     }
 
-    public void addFragment(Fragment fs, String tts, int img){
+    public void addFragment(Fragment fs, String tts){
         fragments.add(fs);
         tabTitles.add(tts);
-        images.add(img);
     }
 
     @Override
@@ -46,14 +44,7 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public CharSequence getPageTitle(int position) {
-        Drawable image = ContextCompat.getDrawable(context, images.get(position));
-        image.setBounds(0, 0, image.getIntrinsicWidth(), image.getIntrinsicHeight());
+        return "";
 
-        SpannableString sb = new SpannableString(" ");
-        ImageSpan is = new ImageSpan(image, ImageSpan.ALIGN_BOTTOM);
-        sb.setSpan(is, 0, 1, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-
-        // tab with string title //return tabTitles.get(position);
-        return sb;
     }
 }
