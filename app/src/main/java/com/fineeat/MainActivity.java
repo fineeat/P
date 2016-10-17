@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     TabLayout tabLayout;
     ViewPager viewPager;
     ViewPagerAdapter viewPagerAdapter;
-    int[] tabImages = { R.drawable.home, R.drawable.search, R.drawable.favorite };
+    int[] tabImages = { R.drawable.home, R.drawable.search, R.drawable.favorite, R.drawable.account };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,13 +51,13 @@ public class MainActivity extends AppCompatActivity {
         viewPagerAdapter.addFragment(new MainFragment(), "Home");
         viewPagerAdapter.addFragment(new SearchFragment(), "Search");
         viewPagerAdapter.addFragment(new FavouriteFragment(), "Favourite");
+        viewPagerAdapter.addFragment(new AccountFragment(), "Account");
 
         viewPager.setAdapter(viewPagerAdapter);
         tabLayout.setupWithViewPager(viewPager);
         setTabIcon(tabLayout);
 
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
 
@@ -75,15 +75,15 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
-
+                //Not used
             }
         });
     }
 
+    //Used in initTab
     public void setTabIcon(TabLayout tabLayout){
         for (int i = 0; i < tabLayout.getTabCount(); i++) {
             tabLayout.getTabAt(i).setIcon(tabImages[i]);
-
             //set selected colour filter for the first tab - might not be the best may to check again in the future
             if( i == 0 ){
                 tabLayout.getTabAt(i).getIcon().setColorFilter(Color.parseColor("#ed4958"), PorterDuff.Mode.MULTIPLY);
