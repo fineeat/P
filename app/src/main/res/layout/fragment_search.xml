@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.fineeat.SearchFragment">
+    tools:context="com.fineeat.FragmentSearch">
 
     <TextView
         android:layout_width="match_parent"
@@ -10,7 +10,13 @@
         android:text="Search"
         android:gravity="center"
         android:textSize="30dp"
-        android:textStyle="bold"
+        android:fontFamily="sans-serif-black"
         />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/cardRecyclerViewSearch"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
 </FrameLayout>

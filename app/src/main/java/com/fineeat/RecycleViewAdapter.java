@@ -29,14 +29,14 @@ public class RecycleViewAdapter  extends RecyclerView.Adapter<RecycleViewAdapter
         public ViewHolder(View view) {
             super(view);
 
-            restaurantName = (TextView)view.findViewById(R.id.gridText);
-            restaurantImage = (ImageView)view.findViewById(R.id.gridImage);
+            restaurantName = (TextView)view.findViewById(R.id.grid2xName);
+            restaurantImage = (ImageView)view.findViewById(R.id.grid2xImage);
         }
     }
 
     @Override
     public RecycleViewAdapter.ViewHolder onCreateViewHolder(ViewGroup viewgroup, int i) {
-        View view = LayoutInflater.from(viewgroup.getContext()).inflate(R.layout.grid_single, viewgroup, false);
+        View view = LayoutInflater.from(viewgroup.getContext()).inflate(R.layout.grid_2x, viewgroup, false);
         return new ViewHolder(view);
     }
 

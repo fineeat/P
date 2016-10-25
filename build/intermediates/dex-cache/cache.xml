@@ -34,17 +34,8 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="6cc58ae018b672db0258e01d5f964b32d41eb9fa">
+        sha1="747496e8b62d57c6839cbf33bbc66d5989fc0155">
         <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_bf9f80132c6432b2c17ae2bd9f679c669714f84a\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\AndroidProjects\Fine_Eat\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
-        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-24.2.1_3762e1a5722419e383b0746123c1f5b71dd21dae\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -57,12 +48,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\AndroidProjects\Fine_Eat\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\classes.jar"
+        jar="C:\AndroidProjects\Fine_Eat\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
-        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-24.2.1_691e0eeaace9ccff086ff1c18655cc7873bbd1db\classes.dex" />
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-24.2.1_3762e1a5722419e383b0746123c1f5b71dd21dae\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -75,12 +66,39 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\AndroidProjects\Fine_Eat\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-24.2.1_691e0eeaace9ccff086ff1c18655cc7873bbd1db\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\AndroidProjects\Fine_Eat\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\8.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="fef2b3e4b6b1b0e5fe7b69fa137a5fa55a3182ab">
+        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-base-8.4.0_694213efb4704583f1eb9f22cf4a894fb599dd80\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\AndroidProjects\Fine_Eat\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="431813961c79dc1dab359cb63f8fa15146e6ac86">
+        sha1="41c78015712e53f0bf832a63143da1690f7835a0">
         <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_740a83782ec39f0ff336f7a3b4c5ba58d2fded3e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\AndroidProjects\Fine_Eat\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="8e673cdfadd8f2d98fdb2fda2285c30f6e449782">
+        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-basement-8.4.0_ca1a96c3719e91f4b5888fcaf04841378efc38c2\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -138,12 +156,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\AndroidProjects\Fine_Eat\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\classes.jar"
+        jar="C:\AndroidProjects\Fine_Eat\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.4.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
-        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-24.2.1_f022b222119b7f023978498e4ae613023b2ce1f2\classes.dex" />
+        sha1="65d086ee9daaf87b5af62ad24471edafa433354c">
+        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-appindexing-8.4.0_9bd9cfa0dfb2696ad0d3aa064f3ec39ff8d19ae4\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -153,6 +171,15 @@
         revision="23.0.3"
         sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
         <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-24.2.1_e03b32e1d3acf3fb32a17e587bbd4c2e7046ba63\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\AndroidProjects\Fine_Eat\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-24.2.1_f022b222119b7f023978498e4ae613023b2ce1f2\classes.dex" />
     </item>
     <item
         is-multidex="true"

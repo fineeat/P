@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="1dp"
+    android:layout_marginRight="1dp">
+
+    <TextView
+        android:id="@+id/grid1xName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Restaurant name"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif-medium">
+    </TextView>
+
+    <TextView
+        android:id="@+id/grid1xLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Location"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_below="@id/grid1xName"
+        android:fontFamily="sans-serif-light">
+    </TextView>
+
+    <ImageView
+        android:id="@+id/grid1xImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:layout_below="@id/grid1xLocation"
+        android:src="@drawable/restaurant1">
+    </ImageView>
+
+    <TextView
+        android:id="@+id/grid1xCuisine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cuisine"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_below="@id/grid1xImage"
+        android:fontFamily="sans-serif-light"
+        android:textStyle="bold">
+    </TextView>
+
+    <TextView
+        android:id="@+id/grid1xOccasion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Category"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_below="@id/grid1xImage"
+        android:fontFamily="sans-serif-light"
+        android:textStyle="bold">
+    </TextView>
+
+    <TextView
+        android:id="@+id/grid1xPromo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Promotion message"
+        android:layout_below="@id/grid1xOccasion"
+        android:fontFamily="sans-serif-light">
+    </TextView>
+
+</LinearLayout>

@@ -2,15 +2,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.fineeat.FavouriteFragment">
+    tools:context="com.fineeat.FragmentFavourite">
 
-    <TextView
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/cardRecyclerViewFavourite"
+        android:scrollbars="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Favourite"
-        android:gravity="center"
-        android:textSize="30dp"
-        android:textStyle="bold"
-        />
+        android:layout_height="match_parent"/>
 
 </FrameLayout>

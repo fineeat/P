@@ -6,7 +6,7 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.fineeat.MainActivity">
+    tools:context="com.fineeat.ActivityMain">
 
     <android.support.design.widget.AppBarLayout
         android:layout_height="wrap_content"
@@ -28,12 +28,12 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/appBarLayout"
-        android:layout_above="@+id/dividerTabLayout">
+        android:layout_above="@+id/dividerTabLayoutMainActivity">
 
     </android.support.v4.view.ViewPager>
 
     <View
-        android:id="@+id/dividerTabLayout"
+        android:id="@+id/dividerTabLayoutMainActivity"
         android:layout_width="match_parent"
         android:layout_height="2px"
         android:background="?android:attr/listDivider"
