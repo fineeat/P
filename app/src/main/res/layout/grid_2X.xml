@@ -23,7 +23,7 @@
         android:maxLines="1"
         android:ellipsize="end"
         android:layout_below="@id/grid2xImage"
-        android:fontFamily="sans-serif-medium">
+        style="@style/RestaurantNameText">
     </TextView>
 
 </LinearLayout>
