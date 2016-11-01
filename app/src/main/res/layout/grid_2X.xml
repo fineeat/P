@@ -1,29 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<android.support.v7.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginLeft="1dp"
-    android:layout_marginRight="1dp">
+    android:layout_marginTop="@dimen/small_margin"
+    android:layout_marginBottom="@dimen/smaller_margin"
+    android:layout_marginLeft="@dimen/smaller_margin"
+    android:layout_marginRight="@dimen/smaller_margin">
 
-    <ImageView
-        android:id="@+id/grid2xImage"
-        android:layout_width="match_parent"
-        android:layout_height="130dp"
-        android:scaleType="center"
-        android:src="@drawable/restaurant2">
-    </ImageView>
-
-    <TextView
-        android:id="@+id/grid2xName"
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Restaurant name"
-        android:maxLines="1"
-        android:ellipsize="end"
-        android:layout_below="@id/grid2xImage"
-        style="@style/RestaurantNameText">
-    </TextView>
+        android:layout_marginTop="@dimen/small_margin">
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/grid2xName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Restaurant name"
+            android:maxLines="1"
+            android:ellipsize="end"
+            style="@style/RestaurantNameText">
+        </TextView>
+
+        <TextView
+            android:id="@+id/grid2xLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Location"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_below="@id/grid1xName"
+            style="@style/RestaurantLocationText">
+        </TextView>
+
+        <ImageView
+            android:id="@+id/grid2xImage"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:scaleType="center"
+            android:src="@drawable/restaurant2"
+            android:layout_marginTop="@dimen/smaller_margin">
+        </ImageView>
+    </LinearLayout>
+</android.support.v7.widget.CardView>
