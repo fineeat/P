@@ -3,51 +3,61 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.fineeat.ActivityMain">
-
-    <android.support.design.widget.AppBarLayout
-        android:layout_height="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/activity_main">
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/activityMainCoordinatorLayout"
         android:layout_width="match_parent"
-        android:theme="@style/AppTheme"
-        android:id="@+id/appBarLayout">
-        <include
+        android:layout_height="match_parent"
+        android:layout_above="@+id/dividerTabLayoutMainActivity"
+        tools:context="com.fineeat.ActivityMain">
+
+        <android.support.design.widget.AppBarLayout
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            layout="@layout/toolbar_layout"
-            />
+            android:theme="@style/AppTheme"
+            android:id="@+id/appBarLayout">
 
-    </android.support.design.widget.AppBarLayout>
+            <android.support.v7.widget.Toolbar
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorPrimary"
+                android:minHeight="?attr/actionBarSize"
+                android:fitsSystemWindows="true"
+                android:id="@+id/toolbar"
+                android:theme="@style/AppTheme"
+                app:layout_scrollFlags="scroll|enterAlways"/>
+        </android.support.design.widget.AppBarLayout>
 
-    <android.support.v4.view.ViewPager
-        android:layout_height="match_parent"
-        android:layout_width="match_parent"
-        android:id="@+id/viewPager"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/appBarLayout"
-        android:layout_above="@+id/dividerTabLayoutMainActivity">
-
-    </android.support.v4.view.ViewPager>
+        <android.support.v4.view.ViewPager
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:id="@+id/viewPager"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_above="@+id/dividerTabLayoutMainActivity"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        </android.support.v4.view.ViewPager>
+    </android.support.design.widget.CoordinatorLayout>
 
     <View
-        android:id="@+id/dividerTabLayoutMainActivity"
         android:layout_width="match_parent"
         android:layout_height="2px"
+        android:id="@+id/dividerTabLayoutMainActivity"
         android:background="?android:attr/listDivider"
         android:layout_above="@+id/tabLayout"/>
 
     <android.support.design.widget.TabLayout
-        android:layout_height="wrap_content"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:id="@+id/tabLayout"
         app:tabMode="fixed"
         app:tabGravity="fill"
         style="@style/MyCustomTabLayout"
-        android:layout_alignParentBottom="true"
-        app:tabIndicatorHeight="0dp">
-
+        app:tabIndicatorHeight="0dp"
+        android:layout_alignParentBottom="true">
     </android.support.design.widget.TabLayout>
+
 </RelativeLayout>
