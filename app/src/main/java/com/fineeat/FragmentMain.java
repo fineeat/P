@@ -20,17 +20,17 @@ public class FragmentMain extends Fragment {
     String[] restaurantNames = {
             "Royal Grill Room",
             "The Glass House",
-            "Radius Restaurant",
+            "Radius FERestaurant",
             "Casa Pascal",
             "Café des Amis",
-            "Sugar Hut Restaurant",
+            "Sugar Hut FERestaurant",
             "Cadillac Café & Bar",
             "Royal Grill Room",
             "The Glass House",
-            "Radius Restaurant",
+            "Radius FERestaurant",
             "Casa Pascal",
             "Café des Amis",
-            "Sugar Hut Restaurant",
+            "Sugar Hut FERestaurant",
             "Cadillac Café & Bar"
     };
     int[] restaurantPromoImages = {
@@ -83,7 +83,7 @@ public class FragmentMain extends Fragment {
             "Spanish"
     };
 
-    String[] restaurantOccasions = {
+    String[] restaurantCategories = {
             "Mexican",
             "Western",
             "Japanese",
@@ -133,22 +133,22 @@ public class FragmentMain extends Fragment {
         RecyclerView.LayoutManager layoutManager = new GridLayoutManager(fragmain.getContext(), 1);
         recyclerView.setLayoutManager(layoutManager);
 
-        ArrayList<RestaurantPromo> restaurants = prepareData();
-        RecycleViewAdapterMain adapter = new RecycleViewAdapterMain(fragmain.getContext(), restaurants);
+        ArrayList<FERestaurantPromo> restaurants = prepareData();
+        RecycleViewAdapterPromo adapter = new RecycleViewAdapterPromo(fragmain.getContext(), restaurants);
         recyclerView.setAdapter(adapter);
     }
 
-    public ArrayList<RestaurantPromo> prepareData(){
-        ArrayList<RestaurantPromo> restaurants = new ArrayList<>();
+    public ArrayList<FERestaurantPromo> prepareData(){
+        ArrayList<FERestaurantPromo> restaurants = new ArrayList<>();
 
         for(int i=0; i<restaurantNames.length; i++){
-            RestaurantPromo restaurant = new RestaurantPromo();
+            FERestaurantPromo restaurant = new FERestaurantPromo();
 
             restaurant.setRestaurantName(restaurantNames[i]);
             restaurant.setImagePromoLink(restaurantPromoImages[i]);
             restaurant.setLocationName(restaurantLocations[i]);
             restaurant.setCuisine(restaurantCuisines[i]);
-            restaurant.setOccasion(restaurantOccasions[i]);
+            restaurant.setCategory(restaurantCategories[i]);
             restaurant.setPromoMessage(restaurantPromoMessage[i]);
 
             restaurants.add(restaurant);

@@ -17,23 +17,23 @@ import java.util.ArrayList;
  */
 public class FragmentSearch extends Fragment {
 
-    String[] restaurantnames = {
+    String[] restaurantNames = {
             "Royal Grill Room",
             "The Glass House",
-            "Radius Restaurant",
+            "Radius FERestaurant",
             "Casa Pascal",
             "Café des Amis",
-            "Sugar Hut Restaurant",
+            "Sugar Hut FERestaurant",
             "Cadillac Café & Bar",
             "Royal Grill Room",
             "The Glass House",
-            "Radius Restaurant",
+            "Radius FERestaurant",
             "Casa Pascal",
             "Café des Amis",
-            "Sugar Hut Restaurant",
+            "Sugar Hut FERestaurant",
             "Cadillac Café & Bar"
     };
-    int[] restaurantimages = {
+    int[] restaurantImages = {
             R.drawable.restaurant0,
             R.drawable.restaurant1,
             R.drawable.restaurant2,
@@ -49,6 +49,56 @@ public class FragmentSearch extends Fragment {
             R.drawable.restaurant5,
             R.drawable.restaurant6
     };
+    String[] restaurantLocations = {
+            "Boatwright",
+            "Bournemouth",
+            "Blackpool",
+            "Runswick",
+            "Acton",
+            "Martslock",
+            "Barcombe",
+            "Blackburn",
+            "Runswick",
+            "Acton",
+            "Hewe",
+            "Cromerth",
+            "Longdale",
+            "Baerney"
+    };
+
+    String[] restaurantCuisines = {
+            "Korean",
+            "Malaysian",
+            "Mexican",
+            "Western",
+            "Japanese",
+            "French",
+            "Korean",
+            "Malaysian",
+            "Thai",
+            "Western",
+            "Western",
+            "Japanese",
+            "Chinese",
+            "Spanish"
+    };
+
+    String[] restaurantCategories = {
+            "Mexican",
+            "Western",
+            "Japanese",
+            "French",
+            "Korean",
+            "Malaysian",
+            "Thai",
+            "Western",
+            "Western",
+            "Japanese",
+            "Chinese",
+            "Japanese",
+            "Chinese",
+            "Spanish"
+    };
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -63,22 +113,24 @@ public class FragmentSearch extends Fragment {
     public void initViews(View frag){
         RecyclerView recyclerView = (RecyclerView)frag.findViewById(R.id.cardRecyclerViewSearch);
         recyclerView.setHasFixedSize(true);
-        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(frag.getContext(), 2);
+        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(frag.getContext(), 1);
         recyclerView.setLayoutManager(layoutManager);
 
-        ArrayList<Restaurant> restaurants = prepareData();
-        RecycleViewAdapter adapter = new RecycleViewAdapter(frag.getContext(), restaurants);
+        ArrayList<FERestaurant> restaurants = prepareData();
+        RecycleViewAdapterRestaurant adapter = new RecycleViewAdapterRestaurant(frag.getContext(), restaurants);
         recyclerView.setAdapter(adapter);
     }
 
-    public ArrayList<Restaurant> prepareData(){
-        ArrayList<Restaurant> restaurants = new ArrayList<>();
+    public ArrayList<FERestaurant> prepareData(){
+        ArrayList<FERestaurant> restaurants = new ArrayList<>();
 
-        for(int i=0; i<restaurantnames.length; i++){
-            Restaurant restaurant = new Restaurant();
+        for(int i=0; i<restaurantNames.length; i++){
+            FERestaurant restaurant = new FERestaurant();
 
-            restaurant.setRestaurantName(restaurantnames[i]);
-            restaurant.setImageLink(restaurantimages[i]);
+            restaurant.setRestaurantName(restaurantNames[i]);
+            restaurant.setImageLink(restaurantImages[i]);
+            restaurant.setCuisine(restaurantCuisines[i]);
+            restaurant.setCategory(restaurantCategories[i]);
 
             restaurants.add(restaurant);
         }
