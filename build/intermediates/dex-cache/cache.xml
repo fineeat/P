@@ -21,6 +21,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\Nicholascwz\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-tasks\1.4.0\d85884acf6810a3bbbecb587f239005cbc846dc4\bolts-tasks-1.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\bolts-tasks-1.4.0_166f71085c8f4d7fa2a1b032191d771392c50056\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\AndroidProjects\Fine_Eat\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
@@ -84,6 +93,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\AndroidProjects\Fine_Eat\app\build\intermediates\exploded-aar\com.facebook.fresco\drawee\0.14.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="cf5e2940501f8f7b9175df6491cebb84f5690f14">
+        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.facebook.fresco-drawee-0.14.1_156b3f4124e16f4ba25088a50862a6e707061a8d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\AndroidProjects\Fine_Eat\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\libs\internal_impl-24.2.1.jar"
         jumboMode="true"
         optimize="true"
@@ -102,11 +120,20 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\AndroidProjects\Fine_Eat\app\build\intermediates\exploded-aar\com.facebook.fresco\fbcore\0.14.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="e5bf70f3683146e4875c006624543cb0a13eac91">
+        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.facebook.fresco-fbcore-0.14.1_74e57ebaa3f45523b6181eb7d51ff950d7925114\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\AndroidProjects\Fine_Eat\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="9693aa28e0979ae6f11b25875bce12071e0fd9c4">
+        sha1="cfea21b184963befde0ef1285bf51f060f6b6d26">
         <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_bf9f80132c6432b2c17ae2bd9f679c669714f84a\classes.dex" />
     </item>
     <item
@@ -138,12 +165,30 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\AndroidProjects\Fine_Eat\app\build\intermediates\exploded-aar\com.facebook.fresco\fresco\0.14.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="c77602d43223db798b1ca56cf307ab0ee3c0e63f">
+        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.facebook.fresco-fresco-0.14.1_7d0f92be7cd8f53dd05299ed78218ef4eab6d6c1\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\AndroidProjects\Fine_Eat\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="2b83105683dc8acce721da2e847234bafef981e6">
+        sha1="7e4614026075473db215ba544e644d76525efda8">
         <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_740a83782ec39f0ff336f7a3b4c5ba58d2fded3e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\AndroidProjects\Fine_Eat\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline\0.14.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="8795af3e130206443f2d5ed45f1b26067aff70dc">
+        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.facebook.fresco-imagepipeline-0.14.1_fed2848e55b22adf374b0a6cb32ebad642b42586\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -153,6 +198,15 @@
         revision="23.0.3"
         sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
         <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_37ff4090490cc4ea09b7b8276606bf32df527ac8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\AndroidProjects\Fine_Eat\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline-base\0.14.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="b881010e06dc39be15b7465cd16492eedbab246f">
+        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.facebook.fresco-imagepipeline-base-0.14.1_4ae05f9cac0d5a214d15ac16abbb9f715c79ab01\classes.dex" />
     </item>
     <item
         is-multidex="true"

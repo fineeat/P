@@ -24,6 +24,7 @@ public class ActivityMain extends AppCompatActivity {
     ViewPager viewPager;
     ViewPagerAdapter viewPagerAdapter;
     int[] tabImages = {R.drawable.home, R.drawable.search, R.drawable.favorite, R.drawable.account};
+
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -136,4 +137,5 @@ public class ActivityMain extends AppCompatActivity {
         AppIndex.AppIndexApi.end(client, getIndexApiAction());
         client.disconnect();
     }
+
 }

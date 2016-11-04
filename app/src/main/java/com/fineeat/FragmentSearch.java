@@ -9,6 +9,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.fineeat.Data.FERestaurant;
+
 import java.util.ArrayList;
 
 
@@ -33,22 +35,38 @@ public class FragmentSearch extends Fragment {
             "Sugar Hut FERestaurant",
             "Cadillac Café & Bar"
     };
-    int[] restaurantImages = {
-            R.drawable.restaurant0,
-            R.drawable.restaurant1,
-            R.drawable.restaurant2,
-            R.drawable.restaurant3,
-            R.drawable.restaurant4,
-            R.drawable.restaurant5,
-            R.drawable.restaurant6,
-            R.drawable.restaurant0,
-            R.drawable.restaurant1,
-            R.drawable.restaurant2,
-            R.drawable.restaurant3,
-            R.drawable.restaurant4,
-            R.drawable.restaurant5,
-            R.drawable.restaurant6
+    String[] restaurantImages = {
+            "http://192.168.1.51:8888/Sample%20Restaurant%20Picture/restaurant0.jpg",
+            "http://192.168.1.51:8888/Sample%20Restaurant%20Picture/restaurant1.jpg",
+            "http://192.168.1.51:8888/Sample%20Restaurant%20Picture/restaurant2.jpg",
+            "http://192.168.1.51:8888/Sample%20Restaurant%20Picture/restaurant3.jpg",
+            "http://192.168.1.51:8888/Sample%20Restaurant%20Picture/restaurant4.jpg",
+            "http://192.168.1.51:8888/Sample%20Restaurant%20Picture/restaurant5.jpg",
+            "http://192.168.1.51:8888/Sample%20Restaurant%20Picture/restaurant6.jpg",
+            "http://192.168.1.51:8888/Sample%20Restaurant%20Picture/restaurant0.jpg",
+            "http://192.168.1.51:8888/Sample%20Restaurant%20Picture/restaurant1.jpg",
+            "http://192.168.1.51:8888/Sample%20Restaurant%20Picture/restaurant2.jpg",
+            "http://192.168.1.51:8888/Sample%20Restaurant%20Picture/restaurant3.jpg",
+            "http://192.168.1.51:8888/Sample%20Restaurant%20Picture/restaurant4.jpg",
+            "http://192.168.1.51:8888/Sample%20Restaurant%20Picture/restaurant5.jpg",
+            "http://192.168.1.51:8888/Sample%20Restaurant%20Picture/restaurant6.jpg"
     };
+    /*String[] restaurantImages = {
+            "http://192.168.1.51:8888/Sample%20Promo%20Picture/promo01.jpg",
+            "http://192.168.1.51:8888/Sample%20Promo%20Picture/promo02.jpg",
+            "http://192.168.1.51:8888/Sample%20Promo%20Picture/promo03.png",
+            "http://192.168.1.51:8888/Sample%20Promo%20Picture/promo04.jpg",
+            "http://192.168.1.51:8888/Sample%20Promo%20Picture/promo05.jpg",
+            "http://192.168.1.51:8888/Sample%20Promo%20Picture/promo06.jpg",
+            "http://192.168.1.51:8888/Sample%20Promo%20Picture/promo07.jpg",
+            "http://192.168.1.51:8888/Sample%20Promo%20Picture/promo08.jpg",
+            "http://192.168.1.51:8888/Sample%20Promo%20Picture/promo09.jpg",
+            "http://192.168.1.51:8888/Sample%20Promo%20Picture/promo10.jpg",
+            "http://192.168.1.51:8888/Sample%20Promo%20Picture/promo11.jpg",
+            "http://192.168.1.51:8888/Sample%20Promo%20Picture/promo12.jpg",
+            "http://192.168.1.51:8888/Sample%20Promo%20Picture/promo13.jpg",
+            "http://192.168.1.51:8888/Sample%20Promo%20Picture/promo14.jpg"
+    };*/
     String[] restaurantLocations = {
             "Boatwright",
             "Bournemouth",
@@ -117,7 +135,7 @@ public class FragmentSearch extends Fragment {
         recyclerView.setLayoutManager(layoutManager);
 
         ArrayList<FERestaurant> restaurants = prepareData();
-        RecycleViewAdapterRestaurant adapter = new RecycleViewAdapterRestaurant(frag.getContext(), restaurants);
+        RecycleViewAdapterSearch adapter = new RecycleViewAdapterSearch(frag.getContext(), restaurants);
         recyclerView.setAdapter(adapter);
     }
 
@@ -128,9 +146,10 @@ public class FragmentSearch extends Fragment {
             FERestaurant restaurant = new FERestaurant();
 
             restaurant.setRestaurantName(restaurantNames[i]);
-            restaurant.setImageLink(restaurantImages[i]);
+            restaurant.setImagePath(restaurantImages[i]);
             restaurant.setCuisine(restaurantCuisines[i]);
             restaurant.setCategory(restaurantCategories[i]);
+            restaurant.setLocationName(restaurantLocations[i]);
 
             restaurants.add(restaurant);
         }

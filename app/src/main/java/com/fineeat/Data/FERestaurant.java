@@ -1,23 +1,23 @@
-package com.fineeat;
+package com.fineeat.Data;
 
 
  //Created by Nicholascwz on 10/12/2016.
 
 
-import java.util.Date;
-
-public class FERestaurantPromo {
-    private int restaurantPromoID;
-    private int resutaurantID;
+public class FERestaurant {
+    private int restaurantID;
     private String restaurantName;
-    private int imagePromoLink;
+    private String imagePath;
     private String locationName;
     private String locationGPS;
     private String cuisine;
     private String category;
-    private String promoMessage;
-    private Date validityStart;
-    private Date validityEnd;
+    private String descriptionShort;
+    private String descriptionLong;
+    private int averagePriceRange;
+
+
+
 
 
 
@@ -29,12 +29,12 @@ public class FERestaurantPromo {
         restaurantName = resname;
     }
 
-    public int getImagePromoLink() {
-        return imagePromoLink;
+    public String getImagePath() {
+        return imagePath;
     }
 
-    public void setImagePromoLink(int imglink) {
-        imagePromoLink = imglink;
+    public void setImagePath(String imglink) {
+        imagePath = imglink;
     }
 
     public String getLocationName() {
@@ -59,13 +59,5 @@ public class FERestaurantPromo {
 
     public void setCategory(String category) {
         this.category = category;
-    }
-
-    public String getPromoMessage() {
-        return promoMessage;
-    }
-
-    public void setPromoMessage(String promoMessage) {
-        this.promoMessage = promoMessage;
     }
 }

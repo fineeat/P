@@ -34,7 +34,7 @@
             android:id="@+id/gridPromoImage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:scaleType="fitXY"
+            android:scaleType="centerCrop"
             android:layout_below="@id/gridPromoLocation"
             android:src="@drawable/restaurant1"
             android:layout_marginTop="@dimen/smaller_margin">

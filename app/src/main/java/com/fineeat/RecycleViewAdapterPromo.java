@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.fineeat.Data.FERestaurantPromo;
+
 import java.util.ArrayList;
 
 //Created by Nicholascwz on 10/12/2016.

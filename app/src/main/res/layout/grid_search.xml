@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -30,15 +31,15 @@
             style="@style/Body1">
         </TextView>
 
-        <ImageView
+        <com.facebook.drawee.view.SimpleDraweeView
             android:id="@+id/gridSearchImage"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:scaleType="fitXY"
+            android:layout_height="200dp"
             android:layout_below="@id/gridSearchLocation"
-            android:src="@drawable/restaurant1"
-            android:layout_marginTop="@dimen/smaller_margin">
-        </ImageView>
+            android:layout_marginTop="@dimen/smaller_margin"
+            fresco:placeholderImage="@color/unloadImages"
+            fresco:fadeDuration="300">
+        </com.facebook.drawee.view.SimpleDraweeView>
 
         <ToggleButton
             android:id="@+id/gridSearchToggleButtonFav"
