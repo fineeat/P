@@ -10,7 +10,7 @@ public class FERestaurantPromo {
     private int restaurantPromoID;
     private int resutaurantID;
     private String restaurantName;
-    private int imagePromoLink;
+    private String imagePromoPath;
     private String locationName;
     private String locationGPS;
     private String cuisine;
@@ -29,12 +29,12 @@ public class FERestaurantPromo {
         restaurantName = resname;
     }
 
-    public int getImagePromoLink() {
-        return imagePromoLink;
+    public String getImagePromoPath() {
+        return imagePromoPath;
     }
 
-    public void setImagePromoLink(int imglink) {
-        imagePromoLink = imglink;
+    public void setImagePromoPath(String imgpath) {
+        imagePromoPath = imgpath;
     }
 
     public String getLocationName() {

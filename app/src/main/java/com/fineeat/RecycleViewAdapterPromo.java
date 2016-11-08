@@ -1,16 +1,19 @@
 package com.fineeat;
 
 import android.content.Context;
+import android.net.Uri;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.facebook.drawee.view.SimpleDraweeView;
 import com.fineeat.Data.FERestaurantPromo;
 
 import java.util.ArrayList;
+
+import static com.fineeat.MyApplication.frescoDisplayImage;
 
 //Created by Nicholascwz on 10/12/2016.
 
@@ -26,7 +29,7 @@ public class RecycleViewAdapterPromo extends RecyclerView.Adapter<RecycleViewAda
 
     public class ViewHolder extends RecyclerView.ViewHolder{
         TextView restaurantName;
-        ImageView restaurantImage;
+        SimpleDraweeView restaurantImage;
         TextView restaurantLocation;
         TextView restaurantCuisine;
         TextView restaurantOccasion;
@@ -37,7 +40,7 @@ public class RecycleViewAdapterPromo extends RecyclerView.Adapter<RecycleViewAda
 
             restaurantName = (TextView)view.findViewById(R.id.gridPromoName);
             restaurantLocation = (TextView)view.findViewById(R.id.gridPromoLocation);
-            restaurantImage = (ImageView)view.findViewById(R.id.gridPromoImage);
+            restaurantImage = (SimpleDraweeView)view.findViewById(R.id.gridPromoImage);
             restaurantCuisine = (TextView)view.findViewById(R.id.gridPromoCuisine);
             restaurantOccasion = (TextView)view.findViewById(R.id.gridPromoCategory);
             restaurantPromoMessage = (TextView)view.findViewById(R.id.gridPromoPromoMsg);
@@ -55,11 +58,15 @@ public class RecycleViewAdapterPromo extends RecyclerView.Adapter<RecycleViewAda
         FERestaurantPromo restaurant = restaurants.get(position);
 
         holder.restaurantName.setText(restaurant.getRestaurantName());
-        holder.restaurantImage.setImageResource(restaurant.getImagePromoLink());
         holder.restaurantLocation.setText(restaurant.getLocationName());
         holder.restaurantCuisine.setText(restaurant.getCuisine());
         holder.restaurantOccasion.setText(restaurant.getCategory());
         holder.restaurantPromoMessage.setText(restaurant.getPromoMessage());
+
+        // Load images using Fresco image loader
+        Uri uri = Uri.parse(restaurant.getImagePromoPath());
+        // the basic way to load image //holder.restaurantImage.setImageURI(uri);
+        frescoDisplayImage(context, holder.restaurantImage, uri);
     }
 
     @Override

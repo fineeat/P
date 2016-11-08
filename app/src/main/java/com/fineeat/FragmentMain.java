@@ -35,21 +35,22 @@ public class FragmentMain extends Fragment {
             "Sugar Hut FERestaurant",
             "Cadillac Café & Bar"
     };
-    int[] restaurantPromoImages = {
-            R.drawable.restaurant0,
-            R.drawable.restaurant1,
-            R.drawable.restaurant2,
-            R.drawable.restaurant3,
-            R.drawable.restaurant4,
-            R.drawable.restaurant5,
-            R.drawable.restaurant6,
-            R.drawable.restaurant0,
-            R.drawable.restaurant1,
-            R.drawable.restaurant2,
-            R.drawable.restaurant3,
-            R.drawable.restaurant4,
-            R.drawable.restaurant5,
-            R.drawable.restaurant6
+
+    String[] restaurantPromoImages = {
+            "http://192.168.1.51:8888/Sample%20Promo%20Picture/promo01.jpg",
+            "http://192.168.1.51:8888/Sample%20Promo%20Picture/promo02.jpg",
+            "http://192.168.1.51:8888/Sample%20Promo%20Picture/promo03.png",
+            "http://192.168.1.51:8888/Sample%20Promo%20Picture/promo04.jpg",
+            "http://192.168.1.51:8888/Sample%20Promo%20Picture/promo05.jpg",
+            "http://192.168.1.51:8888/Sample%20Promo%20Picture/promo06.jpg",
+            "http://192.168.1.51:8888/Sample%20Promo%20Picture/promo07.jpg",
+            "http://192.168.1.51:8888/Sample%20Promo%20Picture/promo08.jpg",
+            "http://192.168.1.51:8888/Sample%20Promo%20Picture/promo09.jpg",
+            "http://192.168.1.51:8888/Sample%20Promo%20Picture/promo10.jpg",
+            "http://192.168.1.51:8888/Sample%20Promo%20Picture/promo11.jpg",
+            "http://192.168.1.51:8888/Sample%20Promo%20Picture/promo12.jpg",
+            "http://192.168.1.51:8888/Sample%20Promo%20Picture/promo13.jpg",
+            "http://192.168.1.51:8888/Sample%20Promo%20Picture/promo14.jpg"
     };
     String[] restaurantLocations = {
             "Boatwright",
@@ -147,7 +148,7 @@ public class FragmentMain extends Fragment {
             FERestaurantPromo restaurant = new FERestaurantPromo();
 
             restaurant.setRestaurantName(restaurantNames[i]);
-            restaurant.setImagePromoLink(restaurantPromoImages[i]);
+            restaurant.setImagePromoPath(restaurantPromoImages[i]);
             restaurant.setLocationName(restaurantLocations[i]);
             restaurant.setCuisine(restaurantCuisines[i]);
             restaurant.setCategory(restaurantCategories[i]);
