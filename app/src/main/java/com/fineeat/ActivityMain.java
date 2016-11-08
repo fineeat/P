@@ -3,6 +3,8 @@ package com.fineeat;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.net.Uri;
+import android.support.design.widget.AppBarLayout;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -37,6 +39,8 @@ public class ActivityMain extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        toolbar.setLogo(R.drawable.title);
 
         initTab();
         // ATTENTION: This was auto-generated to implement the App Indexing API.
@@ -71,10 +75,18 @@ public class ActivityMain extends AppCompatActivity {
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-
+                //Set filter to darken selected tab icon
                 if (tab.getIcon() != null) {
                     tab.getIcon().setColorFilter(Color.parseColor("#181818"), PorterDuff.Mode.MULTIPLY);
                 }
+
+                //Reset app bar position on tab change
+                CoordinatorLayout coordinator = (CoordinatorLayout) findViewById(R.id.activityMainCoordinatorLayout);
+                AppBarLayout appbar = (AppBarLayout) findViewById(R.id.appBarLayout);
+                CoordinatorLayout.LayoutParams params = (CoordinatorLayout.LayoutParams) appbar.getLayoutParams();
+                AppBarLayout.Behavior behavior = (AppBarLayout.Behavior) params.getBehavior();
+
+                behavior.onNestedFling(coordinator, appbar, null, 0, -1000, true);
             }
 
             @Override
@@ -86,7 +98,7 @@ public class ActivityMain extends AppCompatActivity {
 
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
-                //Not used
+                //not used
             }
         });
     }

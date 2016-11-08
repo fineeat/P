@@ -51,22 +51,6 @@ public class FragmentSearch extends Fragment {
             "http://192.168.1.51:8888/Sample%20Restaurant%20Picture/restaurant5.jpg",
             "http://192.168.1.51:8888/Sample%20Restaurant%20Picture/restaurant6.jpg"
     };
-    /*String[] restaurantImages = {
-            "http://192.168.1.51:8888/Sample%20Promo%20Picture/promo01.jpg",
-            "http://192.168.1.51:8888/Sample%20Promo%20Picture/promo02.jpg",
-            "http://192.168.1.51:8888/Sample%20Promo%20Picture/promo03.png",
-            "http://192.168.1.51:8888/Sample%20Promo%20Picture/promo04.jpg",
-            "http://192.168.1.51:8888/Sample%20Promo%20Picture/promo05.jpg",
-            "http://192.168.1.51:8888/Sample%20Promo%20Picture/promo06.jpg",
-            "http://192.168.1.51:8888/Sample%20Promo%20Picture/promo07.jpg",
-            "http://192.168.1.51:8888/Sample%20Promo%20Picture/promo08.jpg",
-            "http://192.168.1.51:8888/Sample%20Promo%20Picture/promo09.jpg",
-            "http://192.168.1.51:8888/Sample%20Promo%20Picture/promo10.jpg",
-            "http://192.168.1.51:8888/Sample%20Promo%20Picture/promo11.jpg",
-            "http://192.168.1.51:8888/Sample%20Promo%20Picture/promo12.jpg",
-            "http://192.168.1.51:8888/Sample%20Promo%20Picture/promo13.jpg",
-            "http://192.168.1.51:8888/Sample%20Promo%20Picture/promo14.jpg"
-    };*/
     String[] restaurantLocations = {
             "Boatwright",
             "Bournemouth",
