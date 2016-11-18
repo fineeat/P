@@ -11,16 +11,22 @@ public class FECategory {
         this.sortNum = sortnum;
     }
 
-    public int id;
+    public final int id;
     public String name;
     public int sortNum;
 
-    public int getId() {
-        return id;
+    public boolean getIsUsed() {
+        return isUsed;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setIsUsed(boolean used) {
+        isUsed = used;
+    }
+
+    public boolean isUsed;
+
+    public int getId() {
+        return id;
     }
 
     public String getName() {

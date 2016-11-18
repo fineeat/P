@@ -1,9 +1,13 @@
 package com.fineeat;
 
 
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
+import android.support.v7.view.ContextThemeWrapper;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -11,7 +15,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.fineeat.Adapters.RecycleViewAdapterSearch;
 
@@ -118,20 +124,61 @@ public class FragmentSearch extends Fragment {
     };
 
     RecyclerView recyclerView;
-    Spinner spinnerCategory, spinnerCuisine;
+    Button buttonCategory, buttonCuisine;
     View fragmentSearch;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Load data
-        LoadingTask loadingTask = new LoadingTask();
-        loadingTask.execute();
-
         // Inflate the layout for this fragment
         fragmentSearch = inflater.inflate(R.layout.fragment_search, container, false);
 
+        initRecyclerView(fragmentSearch);
+        initButtons(fragmentSearch);
+
         return fragmentSearch;
+    }
+
+    public void initButtons(final View frag){
+        buttonCategory = (Button)frag.findViewById(R.id.buttonCategory);
+        buttonCuisine = (Button)frag.findViewById(R.id.buttonCuisine);
+
+        View.OnClickListener onClickListener = new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                switch (v.getId()) {
+                    case R.id.buttonCategory:
+                        Log.v("Entered onClick", "Cat");
+                        Toast.makeText(frag.getContext(), R.string.category, Toast.LENGTH_SHORT).show();
+                        populateCategoryDialog(frag).show();
+                        break;
+
+                    case R.id.buttonCuisine:
+                        Log.v("Entered onClick", "Cui");
+                        Toast.makeText(frag.getContext(), R.string.cuisine, Toast.LENGTH_SHORT).show();
+                        break;
+                }
+            }
+        };
+
+        buttonCategory.setOnClickListener(onClickListener);
+        buttonCuisine.setOnClickListener(onClickListener);
+    }
+
+    public Dialog populateCategoryDialog(View frag){
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        builder.setTitle(R.string.category);
+
+        ArrayAdapter<String> categoriesAdapter = new ArrayAdapter<>(frag.getContext(), android.R.layout.select_dialog_item, Company.getSortedCategoryNames());
+        builder.setAdapter(categoriesAdapter, new DialogInterface.OnClickListener(){
+
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+            }
+        });
+
+        return builder.create();
     }
 
     public void initRecyclerView(View frag){
@@ -161,76 +208,4 @@ public class FragmentSearch extends Fragment {
         }
         return restaurants;
     }
-
-    private class LoadingTask extends AsyncTask<String, Void, ArrayList<FECategory>> {
-        @Override
-        protected ArrayList<FECategory> doInBackground(String... strings) {
-            String jsonCategories = HttpClient.getData(Util.CategoryURLExt);
-            ArrayList<FECategory> categories = CategoryParser.createCategories(jsonCategories);
-            Log.v("Categories created: ", "" + Company.categories.size());
-            return categories;
-        }
-
-        @Override
-        protected void onPostExecute(ArrayList<FECategory> feCategories) {
-            super.onPostExecute(feCategories);
-
-            //Populate the spinner after data is completed
-            initRecyclerView(fragmentSearch);
-            initSpinners(fragmentSearch);
-        }
-    }
-
-    public void initSpinners(View frag){
-        spinnerCategory = (Spinner)frag.findViewById(R.id.spinnerCategory);
-        spinnerCuisine = (Spinner)frag.findViewById(R.id.spinnerCuisine);
-
-        populateSpinnerCategory(frag);
-        //populateSpinnerCuisine();
-    }
-
-    public void populateSpinnerCategory(View frag)
-    {
-        ArrayList<String> cats = new ArrayList<>();
-        ArrayList<FECategory> fecats = Company.categories;
-        Collections.sort(fecats, new Comparator<FECategory>() {
-
-            @Override
-            public int compare(FECategory cat1, FECategory cat2) {
-                /*Return a negative value if object1 is smaller than object2
-                  Return 0 (zero) if objec1 is equal to object2.
-                  Return a positive value if object1 is larger than object2.*/
-                return cat1.sortNum - cat2.sortNum;
-            }
-        });
-
-        for(int i=0; i< fecats.size();i++){
-            cats.add(fecats.get(i).getName());
-        }
-
-        ArrayAdapter<String> categoriesAdapter = new ArrayAdapter<>(frag.getContext(), android.R.layout.simple_spinner_item, cats);
-        categoriesAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerCategory.setAdapter(categoriesAdapter);
-    }
-
-    public void populateSpinnerCuisine()
-    {
-        ArrayList<String> cats = new ArrayList<>();
-        ArrayList<FECuisine> fecui = Company.cuisines;
-        Collections.sort(fecui, new Comparator<FECuisine>() {
-
-            @Override
-            public int compare(FECuisine cui1, FECuisine cui2) {
-                /*Return a negative value if object1 is smaller than object2
-                  Return 0 (zero) if objec1 is equal to object2.
-                  Return a positive value if object1 is larger than object2.*/
-                return cui1.sortNum - cui2.sortNum;
-            }
-        });
-
-        for(int i=0; i< fecui.size();i++){
-            cats.add(fecui.get(i).getName());
-        }
-    }
-
 }

@@ -25,6 +25,10 @@ public class CategoryParser {
 
         //Only proceed if there is data to process
         if(data != null && data.length() > 0) {
+
+            //Reset IsUsed for Category
+            Company.resetCategoryIsUsed();
+
             try {
                 JSONObject jsonObj = new JSONObject(data);
                 JSONArray categoriesJSON = JSONMethod.getJSONArary(Util.category, jsonObj);
@@ -39,6 +43,9 @@ public class CategoryParser {
                     FECategory category = Company.createCategory(id, name, sortNum);
                     categories.add(category);
                 }
+
+                //Delete expired categories
+                Company.deleteUnusedCategory();
 
             } catch (JSONException e) {
                 e.printStackTrace();

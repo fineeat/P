@@ -5,6 +5,27 @@
     android:layout_height="match_parent"
     tools:context="com.fineeat.FragmentSearch">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchFilters">
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/buttonCategory"
+            android:text="@string/category"
+            android:background="@color/colorPrimary"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/buttonCuisine"
+            android:background="@color/colorPrimary"
+            android:text="@string/cuisine"
+            android:layout_toRightOf="@+id/buttonCategory"/>
+    </LinearLayout>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/cardRecyclerViewSearch"
@@ -12,29 +33,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/cardViewBackground"
-        android:layout_below="@+id/spinners">
-
+        android:layout_below="@+id/searchFilters">
     </android.support.v7.widget.RecyclerView>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/spinners"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
-        <Spinner
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:id="@+id/spinnerCategory"/>
-
-        <Spinner
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:id="@+id/spinnerCuisine"
-            android:layout_toRightOf="@+id/spinnerCategory"/>
-    </LinearLayout>
 
 </RelativeLayout>

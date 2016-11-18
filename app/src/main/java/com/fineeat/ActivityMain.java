@@ -48,12 +48,19 @@ public class ActivityMain extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //Toolbar setup
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         toolbar.setLogo(R.drawable.title);
 
+        //Creating tabs
         initTab();
+
+        //Loading data
+        LoadingCategoryTask loadingCategoryTask = new LoadingCategoryTask();
+        loadingCategoryTask.execute();
 
         //Test method
         test();
@@ -63,9 +70,24 @@ public class ActivityMain extends AppCompatActivity {
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
 
-    public void test()
-    {
+    public void test()    {
 
+    }
+
+    private class LoadingCategoryTask extends AsyncTask<String, Void, ArrayList<FECategory>> {
+        @Override
+        protected ArrayList<FECategory> doInBackground(String... strings) {
+            String jsonCategories = HttpClient.getData(Util.CategoryURLExt);
+            ArrayList<FECategory> categories = CategoryParser.createCategories(jsonCategories);
+
+            return categories;
+        }
+
+        @Override
+        protected void onPostExecute(ArrayList<FECategory> feCategories) {
+            super.onPostExecute(feCategories);
+
+        }
     }
 
     @Override

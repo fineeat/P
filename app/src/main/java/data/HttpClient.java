@@ -23,8 +23,7 @@ public class HttpClient {
 
         try{
             connection = (HttpURLConnection)(new URL(Util.BaseURL + urlext)).openConnection();
-            Log.v( "URL ", Util.BaseURL + urlext);
-            connection.setRequestMethod("GET");
+            connection.setRequestMethod("POST");
             connection.setDoInput(true);
             connection.setDoOutput(true);
             connection.connect();
