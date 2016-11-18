@@ -3,6 +3,7 @@ package com.fineeat;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.TabLayout;
@@ -10,12 +11,22 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 
+import com.fineeat.Adapters.ViewPagerAdapter;
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.appindexing.Thing;
 import com.google.android.gms.common.api.GoogleApiClient;
+
+import java.util.ArrayList;
+
+import data.CategoryParser;
+import data.HttpClient;
+import model.Company;
+import model.FECategory;
+import util.Util;
 
 public class ActivityMain extends AppCompatActivity {
 
@@ -43,9 +54,18 @@ public class ActivityMain extends AppCompatActivity {
         toolbar.setLogo(R.drawable.title);
 
         initTab();
+
+        //Test method
+        test();
+
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
+    }
+
+    public void test()
+    {
+
     }
 
     @Override
