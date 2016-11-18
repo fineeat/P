@@ -17,6 +17,7 @@ public class Company {
     public static ArrayList<FELocation> locations = new ArrayList<>();
 
     public static HashMap<String, FECategory> categoriesHM = new HashMap<>();
+    public static HashMap<String, FECuisine> cuisinesHM = new HashMap<>();
 
     //Category Methods
     public static FECategory createCategory(int id, String name, int sort){
@@ -63,10 +64,62 @@ public class Company {
             }
         });
 
-        for(int i=0; i< fecats.size();i++){
+        for(int i=0; i<fecats.size();i++){
             cats.add(fecats.get(i).getName());
         }
 
         return cats;
+    }
+
+    //Cuisine Methods
+    public static FECuisine createCuisine(int id, String name, int sort){
+        FECuisine cuisine = cuisinesHM.get(Integer.toString(id));
+
+        if( cuisine == null) {
+            cuisine = new FECuisine(id, name, sort);
+            cuisines.add(cuisine);
+            cuisinesHM.put(Integer.toString(cuisine.getId()), cuisine);
+        }
+
+        cuisine.setIsUsed(true);
+
+        return cuisine;
+    }
+
+    public static void resetCuisineIsUsed(){
+        for (FECuisine cui:cuisines) {
+            cui.setIsUsed(false);
+        }
+    }
+
+    public static void deleteUnusedCuisine(){
+        for (FECuisine cui:cuisines) {
+            if(!cui.getIsUsed()){
+                cuisinesHM.remove(cui.getId());
+                cuisines.remove(cui);
+                cui=null;
+            }
+        }
+    }
+
+    public static ArrayList<String> getSortedCuisineNames() {
+        ArrayList<String> cuis = new ArrayList<>();
+        ArrayList<FECuisine> fecuis = Company.cuisines;
+
+        Collections.sort(fecuis, new Comparator<FECuisine>() {
+            @Override
+            public int compare(FECuisine cui1, FECuisine cui2) {
+                /*Return a negative value if object1 is smaller than object2
+                  Return 0 (zero) if objec1 is equal to object2.
+                  Return a positive value if object1 is larger than object2.*/
+                return cui1.sortNum - cui2.sortNum;
+            }
+        });
+
+        for(int i=0; i<fecuis.size();i++){
+            cuis.add(fecuis.get(i).getName());
+        }
+
+        return cuis;
     }
 }

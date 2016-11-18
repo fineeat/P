@@ -9,6 +9,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+import util.Link;
 import util.Util;
 
 /**
@@ -22,7 +23,7 @@ public class HttpClient {
         InputStream inputStream;
 
         try{
-            connection = (HttpURLConnection)(new URL(Util.BaseURL + urlext)).openConnection();
+            connection = (HttpURLConnection)(new URL(Link.BaseURL + urlext)).openConnection();
             connection.setRequestMethod("POST");
             connection.setDoInput(true);
             connection.setDoOutput(true);

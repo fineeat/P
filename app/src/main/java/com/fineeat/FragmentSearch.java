@@ -148,14 +148,11 @@ public class FragmentSearch extends Fragment {
             public void onClick(View v) {
                 switch (v.getId()) {
                     case R.id.buttonCategory:
-                        Log.v("Entered onClick", "Cat");
-                        Toast.makeText(frag.getContext(), R.string.category, Toast.LENGTH_SHORT).show();
                         populateCategoryDialog(frag).show();
                         break;
 
                     case R.id.buttonCuisine:
-                        Log.v("Entered onClick", "Cui");
-                        Toast.makeText(frag.getContext(), R.string.cuisine, Toast.LENGTH_SHORT).show();
+                        populateCuisineDialog(frag).show();
                         break;
                 }
             }
@@ -170,6 +167,22 @@ public class FragmentSearch extends Fragment {
         builder.setTitle(R.string.category);
 
         ArrayAdapter<String> categoriesAdapter = new ArrayAdapter<>(frag.getContext(), android.R.layout.select_dialog_item, Company.getSortedCategoryNames());
+        builder.setAdapter(categoriesAdapter, new DialogInterface.OnClickListener(){
+
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+            }
+        });
+
+        return builder.create();
+    }
+
+    public Dialog populateCuisineDialog(View frag){
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        builder.setTitle(R.string.cuisine);
+
+        ArrayAdapter<String> categoriesAdapter = new ArrayAdapter<>(frag.getContext(), android.R.layout.select_dialog_item, Company.getSortedCuisineNames());
         builder.setAdapter(categoriesAdapter, new DialogInterface.OnClickListener(){
 
             @Override

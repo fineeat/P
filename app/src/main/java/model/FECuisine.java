@@ -10,16 +10,13 @@ public class FECuisine {
         this.name = name;
         this.sortNum = sortnum;
     }
-    public int id;
+    public final int id;
     public String name;
     public int sortNum;
+    public boolean isUsed;
 
     public int getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getName() {
@@ -30,11 +27,11 @@ public class FECuisine {
         this.name = name;
     }
 
-    public int getSortNum() {
-        return sortNum;
+    public boolean getIsUsed() {
+        return isUsed;
     }
 
-    public void setSortNum(int sortNum) {
-        this.sortNum = sortNum;
+    public void setIsUsed(boolean used) {
+        isUsed = used;
     }
 }

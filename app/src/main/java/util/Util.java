@@ -5,11 +5,6 @@ package util;
  */
 
 public class Util {
-    //URLs
-    public static String BaseURL = "http://192.168.1.51:8888/";
-    public static String CategoryURLExt = "categories.php";
-
-
     public static final String category = "Category";
     // Category attributes
     public static final String categoryID = "category_id";

@@ -23,9 +23,12 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import java.util.ArrayList;
 
 import data.CategoryParser;
+import data.CuisineParser;
 import data.HttpClient;
 import model.Company;
 import model.FECategory;
+import model.FECuisine;
+import util.Link;
 import util.Util;
 
 public class ActivityMain extends AppCompatActivity {
@@ -59,8 +62,12 @@ public class ActivityMain extends AppCompatActivity {
         initTab();
 
         //Loading data
+        //Category
         LoadingCategoryTask loadingCategoryTask = new LoadingCategoryTask();
         loadingCategoryTask.execute();
+        //Cuisine
+        LoadingCuisineTask loadingCuisineTask = new LoadingCuisineTask();
+        loadingCuisineTask.execute();
 
         //Test method
         test();
@@ -77,7 +84,7 @@ public class ActivityMain extends AppCompatActivity {
     private class LoadingCategoryTask extends AsyncTask<String, Void, ArrayList<FECategory>> {
         @Override
         protected ArrayList<FECategory> doInBackground(String... strings) {
-            String jsonCategories = HttpClient.getData(Util.CategoryURLExt);
+            String jsonCategories = HttpClient.getData(Link.CategoryURLExt);
             ArrayList<FECategory> categories = CategoryParser.createCategories(jsonCategories);
 
             return categories;
@@ -86,6 +93,22 @@ public class ActivityMain extends AppCompatActivity {
         @Override
         protected void onPostExecute(ArrayList<FECategory> feCategories) {
             super.onPostExecute(feCategories);
+
+        }
+    }
+
+    private class LoadingCuisineTask extends AsyncTask<String, Void, ArrayList<FECuisine>> {
+        @Override
+        protected ArrayList<FECuisine> doInBackground(String... strings) {
+            String jsonCategories = HttpClient.getData(Link.CuisineURLExt);
+            ArrayList<FECuisine> cuisines = CuisineParser.createCuisines(jsonCategories);
+
+            return cuisines;
+        }
+
+        @Override
+        protected void onPostExecute(ArrayList<FECuisine> fecuisines) {
+            super.onPostExecute(fecuisines);
 
         }
     }
