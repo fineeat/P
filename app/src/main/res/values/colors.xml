@@ -7,4 +7,6 @@
 
     <color name="cardViewBackground">#e0e0e0</color>
     <color name="unloadImages">#FFE0E0E0</color>
+
+    <color name="BackgroundDark">#212121</color>
 </resources>

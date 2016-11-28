@@ -1,5 +1,7 @@
 package model;
 
+import com.google.gson.annotations.SerializedName;
+
 /**
  * Created by Nicholascwz on 11/15/2016.
  */
@@ -10,8 +12,12 @@ public class FECuisine {
         this.name = name;
         this.sortNum = sortnum;
     }
+
+    @SerializedName("cuisine_id")
     public final int id;
+    @SerializedName("cuisine_name")
     public String name;
+    @SerializedName("cuisine_sortnum")
     public int sortNum;
     public boolean isUsed;
 
@@ -25,6 +31,14 @@ public class FECuisine {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public int getSortNum() {
+        return sortNum;
+    }
+
+    public void setSortNum(int sortNum) {
+        this.sortNum = sortNum;
     }
 
     public boolean getIsUsed() {

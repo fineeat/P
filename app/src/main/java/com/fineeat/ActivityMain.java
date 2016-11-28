@@ -3,16 +3,16 @@ package com.fineeat;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.net.Uri;
-import android.os.AsyncTask;
+import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CoordinatorLayout;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
+import android.view.View;
 
 import com.fineeat.Adapters.ViewPagerAdapter;
 import com.google.android.gms.appindexing.Action;
@@ -20,16 +20,7 @@ import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.appindexing.Thing;
 import com.google.android.gms.common.api.GoogleApiClient;
 
-import java.util.ArrayList;
-
-import data.CategoryParser;
-import data.CuisineParser;
-import data.HttpClient;
-import model.Company;
-import model.FECategory;
-import model.FECuisine;
-import util.Link;
-import util.Util;
+import data.ImportMethod;
 
 public class ActivityMain extends AppCompatActivity {
 
@@ -61,56 +52,29 @@ public class ActivityMain extends AppCompatActivity {
         //Creating tabs
         initTab();
 
+        //Floating action button
+        FloatingActionButton fab = (FloatingActionButton)findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                test(); //TODO: Implement map view in the future
+            }
+        });
+
         //Loading data
         //Category
-        LoadingCategoryTask loadingCategoryTask = new LoadingCategoryTask();
-        loadingCategoryTask.execute();
+        ImportMethod.ImportCategories();
         //Cuisine
-        LoadingCuisineTask loadingCuisineTask = new LoadingCuisineTask();
-        loadingCuisineTask.execute();
-
-        //Test method
-        test();
+        ImportMethod.ImportCuisines();
 
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
 
-    public void test()    {
-
-    }
-
-    private class LoadingCategoryTask extends AsyncTask<String, Void, ArrayList<FECategory>> {
-        @Override
-        protected ArrayList<FECategory> doInBackground(String... strings) {
-            String jsonCategories = HttpClient.getData(Link.CategoryURLExt);
-            ArrayList<FECategory> categories = CategoryParser.createCategories(jsonCategories);
-
-            return categories;
-        }
-
-        @Override
-        protected void onPostExecute(ArrayList<FECategory> feCategories) {
-            super.onPostExecute(feCategories);
-
-        }
-    }
-
-    private class LoadingCuisineTask extends AsyncTask<String, Void, ArrayList<FECuisine>> {
-        @Override
-        protected ArrayList<FECuisine> doInBackground(String... strings) {
-            String jsonCategories = HttpClient.getData(Link.CuisineURLExt);
-            ArrayList<FECuisine> cuisines = CuisineParser.createCuisines(jsonCategories);
-
-            return cuisines;
-        }
-
-        @Override
-        protected void onPostExecute(ArrayList<FECuisine> fecuisines) {
-            super.onPostExecute(fecuisines);
-
-        }
+    public void test(){
+        ImportMethod.ImportCategories();
+        ImportMethod.ImportCuisines();
     }
 
     @Override
