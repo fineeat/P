@@ -66,6 +66,10 @@ public class ActivityMain extends AppCompatActivity {
         ImportMethod.ImportCategories();
         //Cuisine
         ImportMethod.ImportCuisines();
+        //Restaurant
+        ImportMethod.ImportRestaurant();
+        //Promo
+        ImportMethod.ImportPromo();
 
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -75,6 +79,8 @@ public class ActivityMain extends AppCompatActivity {
     public void test(){
         ImportMethod.ImportCategories();
         ImportMethod.ImportCuisines();
+        ImportMethod.ImportRestaurant();
+        ImportMethod.ImportPromo();
     }
 
     @Override

@@ -3,6 +3,7 @@ package com.fineeat.Adapters;
 import android.content.Context;
 import android.net.Uri;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,7 @@ import com.fineeat.R;
 
 import model.FERestaurantPromo;
 import util.FacebookFresco;
+import util.Util;
 
 import java.util.ArrayList;
 
@@ -21,20 +23,20 @@ import java.util.ArrayList;
 
 
 public class RecycleViewAdapterPromo extends RecyclerView.Adapter<RecycleViewAdapterPromo.ViewHolder>{
-    private ArrayList<FERestaurantPromo> restaurants;
+    private ArrayList<FERestaurantPromo> restaurantPromos;
     private Context context;
 
-    public RecycleViewAdapterPromo(Context con, ArrayList<FERestaurantPromo> rests){
-        restaurants = rests;
+    public RecycleViewAdapterPromo(Context con, ArrayList<FERestaurantPromo> promos){
+        restaurantPromos = promos;
         context = con;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
         TextView restaurantName;
-        SimpleDraweeView restaurantImage;
+        SimpleDraweeView promoImage;
         TextView restaurantLocation;
         TextView restaurantCuisine;
-        TextView restaurantOccasion;
+        TextView restaurantCategory;
         TextView restaurantPromoMessage;
 
         public ViewHolder(View view) {
@@ -42,9 +44,9 @@ public class RecycleViewAdapterPromo extends RecyclerView.Adapter<RecycleViewAda
 
             restaurantName = (TextView)view.findViewById(R.id.gridPromoName);
             restaurantLocation = (TextView)view.findViewById(R.id.gridPromoLocation);
-            restaurantImage = (SimpleDraweeView)view.findViewById(R.id.gridPromoImage);
+            promoImage = (SimpleDraweeView)view.findViewById(R.id.gridPromoImage);
             restaurantCuisine = (TextView)view.findViewById(R.id.gridPromoCuisine);
-            restaurantOccasion = (TextView)view.findViewById(R.id.gridPromoCategory);
+            restaurantCategory = (TextView)view.findViewById(R.id.gridPromoCategory);
             restaurantPromoMessage = (TextView)view.findViewById(R.id.gridPromoPromoMsg);
         }
     }
@@ -57,23 +59,26 @@ public class RecycleViewAdapterPromo extends RecyclerView.Adapter<RecycleViewAda
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        FERestaurantPromo restaurant = restaurants.get(position);
+        FERestaurantPromo restaurantPromo = restaurantPromos.get(position);
 
-        holder.restaurantName.setText(restaurant.getRestaurantName());
-        holder.restaurantLocation.setText(restaurant.getLocationName());
-        holder.restaurantCuisine.setText(restaurant.getCuisine());
-        holder.restaurantOccasion.setText(restaurant.getCategory());
-        holder.restaurantPromoMessage.setText(restaurant.getPromoMessage());
+        //Update Restaurant Link required to get the information below. Safety measure in case the link is not set properly upon import.
+        restaurantPromo.updateRestaurantLink();
+
+        holder.restaurantName.setText(restaurantPromo.getRestaurantName());
+        holder.restaurantLocation.setText(restaurantPromo.getRestaurantLocation());
+        holder.restaurantCuisine.setText(restaurantPromo.getRestaurantCuisine());
+        holder.restaurantCategory.setText(restaurantPromo.getRestaurantCategory());
+        holder.restaurantPromoMessage.setText(restaurantPromo.getPromoMessage());
 
         // Load images using Fresco image loader
-        Uri uri = Uri.parse(restaurant.getImagePromoPath());
+        Uri uri = Uri.parse(Util.BaseURL + restaurantPromo.getImagePromoPath());
         // the basic way to load image //holder.restaurantImage.setImageURI(uri);
-        FacebookFresco.frescoDisplayImage(context, holder.restaurantImage, uri);
+        FacebookFresco.frescoDisplayImage(context, holder.promoImage, uri);
     }
 
     @Override
     public int getItemCount() {
-        return restaurants.size();
+        return restaurantPromos.size();
     }
 
 

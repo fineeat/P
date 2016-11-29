@@ -13,6 +13,7 @@ import com.fineeat.R;
 
 import model.FERestaurant;
 import util.FacebookFresco;
+import util.Util;
 
 import java.util.ArrayList;
 
@@ -59,12 +60,12 @@ public class RecycleViewAdapterSearch extends RecyclerView.Adapter<RecycleViewAd
         FERestaurant restaurant = restaurants.get(position);
 
         holder.restaurantName.setText(restaurant.getRestaurantName());
-        holder.restaurantCuisine.setText(restaurant.getCuisine());
-        holder.restaurantCategory.setText(restaurant.getCategory());
+        holder.restaurantCuisine.setText(restaurant.getCuisineString());
+        holder.restaurantCategory.setText(restaurant.getCategoryString());
         holder.restaurantLocation.setText(restaurant.getLocationName());
 
         // Load images using Fresco image loader
-        Uri uri = Uri.parse(restaurant.getImagePath());
+        Uri uri = Uri.parse(Util.BaseURL + restaurant.getImagePath());
         // the basic way to load image //holder.restaurantImage.setImageURI(uri);
         FacebookFresco.frescoDisplayImage(context, holder.restaurantImage, uri);
     }

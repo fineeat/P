@@ -7,6 +7,8 @@ import java.util.List;
 import model.Company;
 import model.FECategory;
 import model.FECuisine;
+import model.FERestaurant;
+import model.FERestaurantPromo;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -83,7 +85,71 @@ public class ImportMethod {
 
             @Override
             public void onFailure(Call<List<FECuisine>> call, Throwable t) {
-                Log.v("onFailure ImportCat", t.getMessage());
+                Log.v("onFailure ImportCui", t.getMessage());
+            }
+        });
+    }
+
+    public static void ImportRestaurant()
+    {
+        Log.v("ImportRestaurant", "--------------------");
+        // prepare call in Retrofit 2.0
+        FineEatServices categoryService = FineEatServices.retrofit.create(FineEatServices.class);
+
+        Call<List<FERestaurant>> call = categoryService.loadRestaurant();
+        call.enqueue(new Callback<List<FERestaurant>>() { // synchronous call would be with execute()
+            @Override
+            public void onResponse(Call<List<FERestaurant>> call, Response<List<FERestaurant>> response) {
+                Log.v("OnResponse ImportRes", response.message());
+
+                if( response.body() != null){
+                    List<FERestaurant> restaurants = response.body();
+
+                    for(FERestaurant res:restaurants){
+                        Log.v("Imported res", res.getRestaurantID() + " - " + res.getRestaurantName());
+                        Company.addRestaurant(res);
+                    }
+                }
+
+                call.cancel(); // to cancel a running request call.cancel();
+                Log.v("ImportRestaurant", "Finish importing");
+            }
+
+            @Override
+            public void onFailure(Call<List<FERestaurant>> call, Throwable t) {
+                Log.v("onFailure ImportRes", t.getMessage());
+            }
+        });
+    }
+
+    public static void ImportPromo()
+    {
+        Log.v("ImportPromo", "--------------------");
+        // prepare call in Retrofit 2.0
+        FineEatServices categoryService = FineEatServices.retrofit.create(FineEatServices.class);
+
+        Call<List<FERestaurantPromo>> call = categoryService.loadPromo();
+        call.enqueue(new Callback<List<FERestaurantPromo>>() { // synchronous call would be with execute()
+            @Override
+            public void onResponse(Call<List<FERestaurantPromo>> call, Response<List<FERestaurantPromo>> response) {
+                Log.v("OnResponse ImportPromo", response.message());
+
+                if( response.body() != null){
+                    List<FERestaurantPromo> promos = response.body();
+
+                    for(FERestaurantPromo pro:promos){
+                        Log.v("Imported pro", pro.getRestaurantPromoID() + " - " + pro.getRestaurantID());
+                        Company.addPromo(pro);
+                    }
+                }
+
+                call.cancel(); // to cancel a running request call.cancel();
+                Log.v("ImportPromo", "Finish importing");
+            }
+
+            @Override
+            public void onFailure(Call<List<FERestaurantPromo>> call, Throwable t) {
+                Log.v("onFailure ImportPromo", t.getMessage());
             }
         });
     }

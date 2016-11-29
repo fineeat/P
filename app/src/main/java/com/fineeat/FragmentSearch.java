@@ -1,6 +1,5 @@
 package com.fineeat;
 
-
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -16,100 +15,13 @@ import android.widget.Button;
 
 import com.fineeat.Adapters.RecycleViewAdapterSearch;
 
-import java.util.ArrayList;
-
 import model.Company;
-import model.FERestaurant;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class FragmentSearch extends Fragment {
-
-    String[] restaurantNames = {
-            "Royal Grill Room",
-            "The Glass House",
-            "Radius FERestaurant",
-            "Casa Pascal",
-            "Café des Amis",
-            "Sugar Hut FERestaurant",
-            "Cadillac Café & Bar",
-            "Royal Grill Room",
-            "The Glass House",
-            "Radius FERestaurant",
-            "Casa Pascal",
-            "Café des Amis",
-            "Sugar Hut FERestaurant",
-            "Cadillac Café & Bar"
-    };
-    String[] restaurantImages = {
-            "http://192.168.1.51:8888/Sample%20Restaurant%20Picture/restaurant0.jpg",
-            "http://192.168.1.51:8888/Sample%20Restaurant%20Picture/restaurant1.jpg",
-            "http://192.168.1.51:8888/Sample%20Restaurant%20Picture/restaurant2.jpg",
-            "http://192.168.1.51:8888/Sample%20Restaurant%20Picture/restaurant3.jpg",
-            "http://192.168.1.51:8888/Sample%20Restaurant%20Picture/restaurant4.jpg",
-            "http://192.168.1.51:8888/Sample%20Restaurant%20Picture/restaurant5.jpg",
-            "http://192.168.1.51:8888/Sample%20Restaurant%20Picture/restaurant6.jpg",
-            "http://192.168.1.51:8888/Sample%20Restaurant%20Picture/restaurant0.jpg",
-            "http://192.168.1.51:8888/Sample%20Restaurant%20Picture/restaurant1.jpg",
-            "http://192.168.1.51:8888/Sample%20Restaurant%20Picture/restaurant2.jpg",
-            "http://192.168.1.51:8888/Sample%20Restaurant%20Picture/restaurant3.jpg",
-            "http://192.168.1.51:8888/Sample%20Restaurant%20Picture/restaurant4.jpg",
-            "http://192.168.1.51:8888/Sample%20Restaurant%20Picture/restaurant5.jpg",
-            "http://192.168.1.51:8888/Sample%20Restaurant%20Picture/restaurant6.jpg"
-    };
-    String[] restaurantLocations = {
-            "Boatwright",
-            "Bournemouth",
-            "Blackpool",
-            "Runswick",
-            "Acton",
-            "Martslock",
-            "Barcombe",
-            "Blackburn",
-            "Runswick",
-            "Acton",
-            "Hewe",
-            "Cromerth",
-            "Longdale",
-            "Baerney"
-    };
-
-    String[] restaurantCuisines = {
-            "Korean",
-            "Malaysian",
-            "Mexican",
-            "Western",
-            "Japanese",
-            "French",
-            "Korean",
-            "Malaysian",
-            "Thai",
-            "Western",
-            "Western",
-            "Japanese",
-            "Chinese",
-            "Spanish"
-    };
-
-    String[] restaurantCategories = {
-            "Mexican",
-            "Western",
-            "Japanese",
-            "French",
-            "Korean",
-            "Malaysian",
-            "Thai",
-            "Western",
-            "Western",
-            "Japanese",
-            "Chinese",
-            "Japanese",
-            "Chinese",
-            "Spanish"
-    };
-
     RecyclerView recyclerView;
     Button buttonCategory, buttonCuisine;
     View fragmentSearch;
@@ -187,25 +99,7 @@ public class FragmentSearch extends Fragment {
         RecyclerView.LayoutManager layoutManager = new GridLayoutManager(frag.getContext(), 1);
         recyclerView.setLayoutManager(layoutManager);
 
-        ArrayList<FERestaurant> restaurants = prepareData();
-        RecycleViewAdapterSearch adapter = new RecycleViewAdapterSearch(frag.getContext(), restaurants);
+        RecycleViewAdapterSearch adapter = new RecycleViewAdapterSearch(frag.getContext(), Company.restaurants);
         recyclerView.setAdapter(adapter);
-    }
-
-    public ArrayList<FERestaurant> prepareData(){
-        ArrayList<FERestaurant> restaurants = new ArrayList<>();
-
-        for(int i=0; i<restaurantNames.length; i++){
-            FERestaurant restaurant = new FERestaurant();
-
-            restaurant.setRestaurantName(restaurantNames[i]);
-            restaurant.setImagePath(restaurantImages[i]);
-            restaurant.setCuisine(restaurantCuisines[i]);
-            restaurant.setCategory(restaurantCategories[i]);
-            restaurant.setLocationName(restaurantLocations[i]);
-
-            restaurants.add(restaurant);
-        }
-        return restaurants;
     }
 }

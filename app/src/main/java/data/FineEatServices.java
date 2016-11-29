@@ -4,6 +4,8 @@ import java.util.List;
 
 import model.FECategory;
 import model.FECuisine;
+import model.FERestaurant;
+import model.FERestaurantPromo;
 import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -25,4 +27,10 @@ public interface FineEatServices {
 
     @GET("cuisines.php")
     Call<List<FECuisine>> loadCuisines();
+
+    @GET("restaurants.php")
+    Call<List<FERestaurant>> loadRestaurant();
+
+    @GET("promos.php")
+    Call<List<FERestaurantPromo>> loadPromo();
 }
