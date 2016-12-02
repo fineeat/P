@@ -102,4 +102,9 @@ public class FragmentSearch extends Fragment {
         RecycleViewAdapterSearch adapter = new RecycleViewAdapterSearch(frag.getContext(), Company.restaurants);
         recyclerView.setAdapter(adapter);
     }
+
+    public void refresh()
+    {
+        recyclerView.getAdapter().notifyDataSetChanged();
+    }
 }

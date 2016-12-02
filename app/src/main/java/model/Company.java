@@ -32,7 +32,7 @@ public class Company {
         Collections.sort(fecats, new Comparator<FECategory>() {
             @Override
             public int compare(FECategory cat1, FECategory cat2) {
-                return cat1.sortNum - cat2.sortNum;
+                return cat1.getSortNum() - cat2.getSortNum();
             }
         });
 
@@ -49,7 +49,7 @@ public class Company {
         Collections.sort(fecuis, new Comparator<FECuisine>() {
             @Override
             public int compare(FECuisine cui1, FECuisine cui2) {
-                return cui1.sortNum - cui2.sortNum;
+                return cui1.getSortNum() - cui2.getSortNum();
             }
         });
 

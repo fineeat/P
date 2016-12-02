@@ -13,6 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.View;
+import android.widget.Toast;
 
 import com.fineeat.Adapters.ViewPagerAdapter;
 import com.google.android.gms.appindexing.Action;
@@ -58,6 +59,8 @@ public class ActivityMain extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 test(); //TODO: Implement map view in the future
+                Toast toast = Toast.makeText(getApplicationContext(), "Floating action button clicked", Toast.LENGTH_SHORT);
+                toast.show();
             }
         });
 
@@ -68,8 +71,7 @@ public class ActivityMain extends AppCompatActivity {
         ImportMethod.ImportCuisines();
         //Restaurant
         ImportMethod.ImportRestaurant();
-        //Promo
-        ImportMethod.ImportPromo();
+
 
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -80,7 +82,6 @@ public class ActivityMain extends AppCompatActivity {
         ImportMethod.ImportCategories();
         ImportMethod.ImportCuisines();
         ImportMethod.ImportRestaurant();
-        ImportMethod.ImportPromo();
     }
 
     @Override

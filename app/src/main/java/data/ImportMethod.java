@@ -113,6 +113,9 @@ public class ImportMethod {
 
                 call.cancel(); // to cancel a running request call.cancel();
                 Log.v("ImportRestaurant", "Finish importing");
+
+                //Import Promo after restaurant
+                ImportPromo();
             }
 
             @Override

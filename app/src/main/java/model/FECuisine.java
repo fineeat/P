@@ -14,12 +14,12 @@ public class FECuisine {
     }
 
     @SerializedName("cuisine_id")
-    public final int id;
+    private final int id;
     @SerializedName("cuisine_name")
-    public String name;
+    private String name;
     @SerializedName("cuisine_sortnum")
-    public int sortNum;
-    public boolean isUsed;
+    private int sortNum;
+    private boolean isUsed;
 
     public int getId() {
         return id;

@@ -19,6 +19,8 @@ import model.Company;
  * A simple {@link Fragment} subclass.
  */
 public class FragmentMain extends Fragment {
+    RecyclerView recyclerView;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -29,13 +31,25 @@ public class FragmentMain extends Fragment {
         return fragmentMain;
     }
 
+    @Override
+    public void onStart() {
+        super.onStart();
+        refresh();
+    }
+
     public void initViews(View fragmain){
-        RecyclerView recyclerView = (RecyclerView)fragmain.findViewById(R.id.cardRecyclerViewMain);
+        recyclerView = (RecyclerView)fragmain.findViewById(R.id.cardRecyclerViewMain);
         recyclerView.setHasFixedSize(true);
         RecyclerView.LayoutManager layoutManager = new GridLayoutManager(fragmain.getContext(), 1);
         recyclerView.setLayoutManager(layoutManager);
 
         RecycleViewAdapterPromo adapter = new RecycleViewAdapterPromo(fragmain.getContext(), Company.promos);
         recyclerView.setAdapter(adapter);
+
+    }
+
+    public void refresh()
+    {
+        recyclerView.getAdapter().notifyDataSetChanged();
     }
 }
