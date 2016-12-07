@@ -45,7 +45,6 @@ public class FragmentMain extends Fragment {
 
         RecycleViewAdapterPromo adapter = new RecycleViewAdapterPromo(fragmain.getContext(), Company.promos);
         recyclerView.setAdapter(adapter);
-
     }
 
     public void refresh()

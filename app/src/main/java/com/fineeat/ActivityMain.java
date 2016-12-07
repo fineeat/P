@@ -22,6 +22,7 @@ import com.google.android.gms.appindexing.Thing;
 import com.google.android.gms.common.api.GoogleApiClient;
 
 import data.ImportMethod;
+import model.Company;
 
 public class ActivityMain extends AppCompatActivity {
 
@@ -64,6 +65,8 @@ public class ActivityMain extends AppCompatActivity {
             }
         });
 
+        //User TODO: Implement login in the future
+        Company.createUser();
         //Loading data
         //Category
         ImportMethod.ImportCategories();

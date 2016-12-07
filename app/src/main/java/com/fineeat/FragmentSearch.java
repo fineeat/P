@@ -38,6 +38,12 @@ public class FragmentSearch extends Fragment {
         return fragmentSearch;
     }
 
+    @Override
+    public void onStart() {
+        super.onStart();
+        refresh();
+    }
+
     public void initButtons(final View frag){
         buttonCategory = (Button)frag.findViewById(R.id.buttonCategory);
         buttonCuisine = (Button)frag.findViewById(R.id.buttonCuisine);

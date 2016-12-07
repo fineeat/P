@@ -14,12 +14,12 @@ public class FECategory {
     }
 
     @SerializedName("category_id")
-    public final int id;
+    private final int id;
     @SerializedName("category_name")
-    public String name;
+    private String name;
     @SerializedName("category_sortnum")
-    public int sortNum;
-    public boolean isUsed;
+    private int sortNum;
+    private boolean isUsed;
 
     public int getId() {
         return id;

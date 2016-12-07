@@ -12,7 +12,7 @@ import java.util.HashMap;
  */
 
 public class Company {
-    public static FEUser user;
+    public static FEUser loggedUser;
 
     public static ArrayList<FECategory> categories = new ArrayList<>();
     public static ArrayList<FECuisine> cuisines = new ArrayList<>();
@@ -166,5 +166,13 @@ public class Company {
         }
 
         promo.updateRestaurantLink();
+    }
+
+    //User Methods
+    public static FEUser createUser(){
+        FEUser user = new FEUser(1, "UserTest", "UserTest@FineEat.com", "0129821192");
+        loggedUser = user;
+
+        return user;
     }
 }

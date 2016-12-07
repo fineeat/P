@@ -2,15 +2,21 @@ package com.fineeat.Adapters;
 
 import android.content.Context;
 import android.net.Uri;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.TextView;
+import android.widget.Toast;
+import android.widget.ToggleButton;
 
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.fineeat.R;
 
+import model.Company;
 import model.FERestaurant;
 import util.FacebookFresco;
 import util.Util;
@@ -37,15 +43,22 @@ public class RecycleViewAdapterSearch extends RecyclerView.Adapter<RecycleViewAd
         TextView restaurantCuisine;
         TextView restaurantCategory;
         TextView restaurantLocation;
+        TextView restaurantDescription;
+        ToggleButton favouriteToggleButton;
+        Button shareButton;
+        CardView cardView;
+
 
         public ViewHolder(View view) {
             super(view);
-
+            cardView = (CardView) view.findViewById(R.id.gridSearchCardView);
             restaurantName = (TextView)view.findViewById(R.id.gridSearchName);
             restaurantImage = (SimpleDraweeView)view.findViewById(R.id.gridSearchImage);
             restaurantCuisine = (TextView)view.findViewById(R.id.gridSearchCuisine);
             restaurantCategory = (TextView)view.findViewById(R.id.gridSearchCategory);
             restaurantLocation = (TextView)view.findViewById(R.id.gridSearchLocation);
+            favouriteToggleButton = (ToggleButton)view.findViewById(R.id.gridSearchToggleButtonFav);
+            shareButton = (Button)view.findViewById(R.id.gridSearchButtonShare);
         }
     }
 
@@ -57,7 +70,7 @@ public class RecycleViewAdapterSearch extends RecyclerView.Adapter<RecycleViewAd
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        FERestaurant restaurant = restaurants.get(position);
+        final FERestaurant restaurant = restaurants.get(position);
 
         holder.restaurantName.setText(restaurant.getRestaurantName());
         holder.restaurantCuisine.setText(restaurant.getCuisineString());
@@ -68,6 +81,40 @@ public class RecycleViewAdapterSearch extends RecyclerView.Adapter<RecycleViewAd
         Uri uri = Uri.parse(Util.BaseURL + restaurant.getImagePath());
         // the basic way to load image //holder.restaurantImage.setImageURI(uri);
         FacebookFresco.frescoDisplayImage(context, holder.restaurantImage, uri);
+
+        //setOnClickListener for buttons
+        holder.favouriteToggleButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean ischecked) {
+                Toast toast;
+
+                if(ischecked){
+                    Company.loggedUser.addFavourite(restaurant);
+                    toast = Toast.makeText(context, "Added to Favourite "+ restaurant.getRestaurantName(), Toast.LENGTH_SHORT);
+                }else{
+                    Company.loggedUser.removeFavourite(restaurant);
+                    toast = Toast.makeText(context, "Removed from Favourite", Toast.LENGTH_SHORT);
+                }
+
+                toast.show();
+            }
+        });
+
+        holder.shareButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Toast toast = Toast.makeText(context, "Share button clicked", Toast.LENGTH_SHORT);
+                toast.show();
+            }
+        });
+
+        holder.cardView.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Toast toast = Toast.makeText(context, restaurant.getRestaurantName() + " clicked", Toast.LENGTH_SHORT);
+                toast.show();
+            }
+        });
     }
 
     @Override

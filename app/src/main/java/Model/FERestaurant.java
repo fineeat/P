@@ -40,6 +40,12 @@ public class FERestaurant {
     @SerializedName("restaurant_average_price")
     private int averagePriceRange;
 
+    @SerializedName("restaurant_website")
+    private String website;
+
+    @SerializedName("restaurant_phone")
+    private String phone;
+
     @SerializedName("cuisines")
     private ArrayList<FERestaurantCuisine> cuisines = new ArrayList<>();
 
@@ -74,6 +80,10 @@ public class FERestaurant {
         return averagePriceRange;
     }
 
+    public String getPhone() {
+        return phone;
+    }
+
     public String getRestaurantName() {
         return restaurantName;
     }
@@ -86,6 +96,10 @@ public class FERestaurant {
         return locationName;
     }
 
+    public String getWebsite() {
+        return website;
+    }
+
     public ArrayList<FERestaurantCuisine> getCuisines() {
         return cuisines;
     }
@@ -96,6 +110,22 @@ public class FERestaurant {
 
     public ArrayList<FERestaurantPromo> getPromos() {
         return promos;
+    }
+
+    public String getDollarSign() {
+        String dollar = "$$$$$";
+
+        if(averagePriceRange <= 25) {
+            dollar = "$";
+        }else if(averagePriceRange <= 50) {
+            dollar = "$$";
+        }else if(averagePriceRange <= 100) {
+            dollar = "$$$";
+        }else if(averagePriceRange <= 250) {
+            dollar = "$$$$";
+        }
+
+        return dollar;
     }
 
     public void update(FERestaurant res){
