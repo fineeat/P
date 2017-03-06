@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="play-services-appindexing-8.4.0">
     <CLASSES>
-      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/8.4.0/res" />
-      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/8.4.0/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.android/build-cache/6d5de633afb11e5b2be0e209f75eb29845b2dc56/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/6d5de633afb11e5b2be0e209f75eb29845b2dc56/output/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

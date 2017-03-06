@@ -8,6 +8,7 @@ import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,29 +36,24 @@ public class FragmentFavourite extends Fragment {
         // Inflate the layout for this fragment
         fragmentFavourite = inflater.inflate(R.layout.fragment_favourite, container, false);
 
-        initRecyclerView(fragmentFavourite);
+        initRecyclerView();
 
         return fragmentFavourite;
     }
 
-    @Override
-    public void onStart() {
-        super.onStart();
-        refresh();
-    }
-
-    public void initRecyclerView(View frag){
-        recyclerView = (RecyclerView)frag.findViewById(R.id.cardRecyclerViewFav);
+    public void initRecyclerView(){
+        recyclerView = (RecyclerView)fragmentFavourite.findViewById(R.id.cardRecyclerViewFav);
         recyclerView.setHasFixedSize(true);
-        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(frag.getContext(), 1);
+        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(fragmentFavourite.getContext(), 1);
         recyclerView.setLayoutManager(layoutManager);
 
-        RecycleViewAdapterFavourite adapter = new RecycleViewAdapterFavourite(frag.getContext(), Company.loggedUser.getFavouriteRestaurants());
+        RecycleViewAdapterFavourite adapter = new RecycleViewAdapterFavourite(fragmentFavourite.getContext(), Company.loggedUser.getFavouriteRestaurants());
         recyclerView.setAdapter(adapter);
     }
 
     public void refresh()
     {
+        Log.d("Refresh","FragFav");
         recyclerView.getAdapter().notifyDataSetChanged();
     }
 

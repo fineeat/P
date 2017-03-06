@@ -11,6 +11,7 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Toast;
@@ -140,6 +141,9 @@ public class ActivityMain extends AppCompatActivity {
                 //not used
             }
         });
+
+        //Setup viewpager listener so that fragment gets refresh whenever it is visible
+        setupViewPagerListener();
     }
 
     //Used in initTab
@@ -151,6 +155,40 @@ public class ActivityMain extends AppCompatActivity {
                 tabLayout.getTabAt(i).getIcon().setColorFilter(Color.parseColor("#181818"), PorterDuff.Mode.MULTIPLY);
             }
         }
+    }
+
+    //On fragment page visible listener
+    public void setupViewPagerListener(){
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener(){
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                switch (position){
+                    case 0:
+                        FragmentMain fragmain = (FragmentMain)viewPagerAdapter.getItem(position);
+                        fragmain.refresh();
+                        break;
+                    case 1:
+                        FragmentSearch fragsearch = (FragmentSearch) viewPagerAdapter.getItem(position);
+                        fragsearch.refresh();
+                        break;
+                    case 2:
+                        FragmentFavourite fragfav = (FragmentFavourite)viewPagerAdapter.getItem(position);
+                        fragfav.refresh();
+                        break;
+                }
+                Log.d("Fragment Visible", ""+position);
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
     }
 
     /**

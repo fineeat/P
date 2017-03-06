@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,32 +33,26 @@ public class FragmentSearch extends Fragment {
         // Inflate the layout for this fragment
         fragmentSearch = inflater.inflate(R.layout.fragment_search, container, false);
 
-        initRecyclerView(fragmentSearch);
-        initButtons(fragmentSearch);
+        initRecyclerView();
+        initButtons();
 
         return fragmentSearch;
     }
 
-    @Override
-    public void onStart() {
-        super.onStart();
-        refresh();
-    }
-
-    public void initButtons(final View frag){
-        buttonCategory = (Button)frag.findViewById(R.id.buttonCategory);
-        buttonCuisine = (Button)frag.findViewById(R.id.buttonCuisine);
+    public void initButtons(){
+        buttonCategory = (Button)fragmentSearch.findViewById(R.id.buttonCategory);
+        buttonCuisine = (Button)fragmentSearch.findViewById(R.id.buttonCuisine);
 
         View.OnClickListener onClickListener = new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 switch (v.getId()) {
                     case R.id.buttonCategory:
-                        populateCategoryDialog(frag).show();
+                        populateCategoryDialog().show();
                         break;
 
                     case R.id.buttonCuisine:
-                        populateCuisineDialog(frag).show();
+                        populateCuisineDialog().show();
                         break;
                 }
             }
@@ -67,11 +62,11 @@ public class FragmentSearch extends Fragment {
         buttonCuisine.setOnClickListener(onClickListener);
     }
 
-    public Dialog populateCategoryDialog(View frag){
+    public Dialog populateCategoryDialog(){
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder.setTitle(R.string.category);
 
-        ArrayAdapter<String> categoriesAdapter = new ArrayAdapter<>(frag.getContext(), android.R.layout.select_dialog_item, Company.getSortedCategoryNames());
+        ArrayAdapter<String> categoriesAdapter = new ArrayAdapter<>(fragmentSearch.getContext(), android.R.layout.select_dialog_item, Company.getSortedCategoryNames());
         builder.setAdapter(categoriesAdapter, new DialogInterface.OnClickListener(){
 
             @Override
@@ -83,11 +78,11 @@ public class FragmentSearch extends Fragment {
         return builder.create();
     }
 
-    public Dialog populateCuisineDialog(View frag){
+    public Dialog populateCuisineDialog(){
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder.setTitle(R.string.cuisine);
 
-        ArrayAdapter<String> categoriesAdapter = new ArrayAdapter<>(frag.getContext(), android.R.layout.select_dialog_item, Company.getSortedCuisineNames());
+        ArrayAdapter<String> categoriesAdapter = new ArrayAdapter<>(fragmentSearch.getContext(), android.R.layout.select_dialog_item, Company.getSortedCuisineNames());
         builder.setAdapter(categoriesAdapter, new DialogInterface.OnClickListener(){
 
             @Override
@@ -99,18 +94,19 @@ public class FragmentSearch extends Fragment {
         return builder.create();
     }
 
-    public void initRecyclerView(View frag){
-        recyclerView = (RecyclerView)frag.findViewById(R.id.cardRecyclerViewSearch);
+    public void initRecyclerView(){
+        recyclerView = (RecyclerView)fragmentSearch.findViewById(R.id.cardRecyclerViewSearch);
         recyclerView.setHasFixedSize(true);
-        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(frag.getContext(), 1);
+        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(fragmentSearch.getContext(), 1);
         recyclerView.setLayoutManager(layoutManager);
 
-        RecycleViewAdapterSearch adapter = new RecycleViewAdapterSearch(frag.getContext(), Company.restaurants);
+        RecycleViewAdapterSearch adapter = new RecycleViewAdapterSearch(fragmentSearch.getContext(), Company.restaurants);
         recyclerView.setAdapter(adapter);
     }
 
     public void refresh()
     {
+        Log.d("Refresh","FragSearch");
         recyclerView.getAdapter().notifyDataSetChanged();
     }
 }

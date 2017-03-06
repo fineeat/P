@@ -3,12 +3,30 @@
 
     <item
         is-multidex="true"
-        jar="C:\AndroidProjects\Fine_Eat\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\classes.jar"
+        jar="C:\Users\Nicholascwz\.android\build-cache\5555d38d5ffa9f9f0389110240575f4f9bc4b365\output\jars\libs\internal_impl-24.2.1.jar"
         jumboMode="true"
         optimize="true"
-        revision="24.0.3"
-        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
-        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-24.2.1_aad05b0bb8f4077b85f6bbff5a0aeb2185cb3862\classes.dex" />
+        revision="25.0.0"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_e5d49385c190ad2db937d95f131090958f89cda3\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Nicholascwz\.gradle\caches\modules-2\files-2.1\io.reactivex\rxjava\1.1.6\2586312cd2b8a511e4c6236736f5a039fc0f2273\rxjava-1.1.6.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="2586312cd2b8a511e4c6236736f5a039fc0f2273">
+        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\rxjava-1.1.6_aa918946dccdbed7b2bf674f11c7c528fac2fd24\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Nicholascwz\.android\build-cache\fe87589d056d20308b150baa6b78c3bbb872d64d\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="b881010e06dc39be15b7465cd16492eedbab246f">
+        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_a9a2488bfd83cc341f09f1141026eaa35738f974\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -21,111 +39,66 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Nicholascwz\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\adapter-rxjava\2.1.0\693eddc23e87ab13f9cf5001707ce8e7e1d1ff01\adapter-rxjava-2.1.0.jar"
+        jar="C:\Users\Nicholascwz\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.2.1\support-annotations-24.2.1.jar"
         jumboMode="true"
         optimize="true"
-        revision="24.0.3"
-        sha1="693eddc23e87ab13f9cf5001707ce8e7e1d1ff01">
-        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\adapter-rxjava-2.1.0_aa8b75331fee9b7615fd7cc353aa066ab8bb7f9e\classes.dex" />
+        revision="25.0.0"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-24.2.1_b53360976b7f83fc5a99594606fdcefd153f6449\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\AndroidProjects\Fine_Eat\app\build\intermediates\exploded-aar\com.facebook.fresco\drawee\0.14.1\jars\classes.jar"
+        jar="C:\Users\Nicholascwz\.android\build-cache\fb76d1fea56a2a817ad849ac985e041a31c89ac2\output\jars\classes.jar"
         jumboMode="true"
         optimize="true"
-        revision="24.0.3"
-        sha1="cf5e2940501f8f7b9175df6491cebb84f5690f14">
-        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.facebook.fresco-drawee-0.14.1_156b3f4124e16f4ba25088a50862a6e707061a8d\classes.dex" />
+        revision="25.0.0"
+        sha1="c5e6490573cd2cc8018417f60ddd251138b6ed61">
+        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_26887f17fa5c55de2d207f5010d8de861b7e49b9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Nicholascwz\.android\build-cache\5dd7650be97935a95fddeb0870be9b89c2683dd6\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_32bcb9d5f8f6ba54497e099be73973ac50809286\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Nicholascwz\.android\build-cache\2152b3ed6c74eeab8bfd59240d0459bfcba445ae\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8795af3e130206443f2d5ed45f1b26067aff70dc">
+        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_ccc7efb7d0246192426697f46154d2add3bf1d65\classes.dex" />
     </item>
     <item
         is-multidex="true"
         jar="C:\Users\Nicholascwz\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\retrofit\2.1.0\2de7cd8b95b7021b1d597f049bcb422055119f2c\retrofit-2.1.0.jar"
         jumboMode="true"
         optimize="true"
-        revision="24.0.3"
+        revision="25.0.0"
         sha1="2de7cd8b95b7021b1d597f049bcb422055119f2c">
         <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\retrofit-2.1.0_c772535d645efdd88119f2aa5b6abc235464adfa\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\AndroidProjects\Fine_Eat\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\classes.jar"
+        jar="C:\AndroidProjects\Fine_Eat\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
-        revision="24.0.3"
-        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
-        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-24.2.1_691e0eeaace9ccff086ff1c18655cc7873bbd1db\classes.dex" />
+        revision="25.0.0"
+        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
+        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_bf9f80132c6432b2c17ae2bd9f679c669714f84a\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\AndroidProjects\Fine_Eat\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jar="C:\Users\Nicholascwz\.android\build-cache\2be766e14f8d35efb649f32e65654bdc7c517adc\output\jars\classes.jar"
         jumboMode="true"
         optimize="true"
-        revision="24.0.3"
-        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
-        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_5e1d45f3f3a32dc9e88467dde400eda383c8451b\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Nicholascwz\.gradle\caches\modules-2\files-2.1\io.reactivex\rxjava\1.1.6\2586312cd2b8a511e4c6236736f5a039fc0f2273\rxjava-1.1.6.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="2586312cd2b8a511e4c6236736f5a039fc0f2273">
-        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\rxjava-1.1.6_aa918946dccdbed7b2bf674f11c7c528fac2fd24\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\AndroidProjects\Fine_Eat\app\build\intermediates\exploded-aar\com.android.support\design\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
-        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-24.2.1_ba6e74abc2dd6611e626466df33bab2d0538a235\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\AndroidProjects\Fine_Eat\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-24.2.1_8348280d4e28dc6dab94e5b1393b94e7997c9ef2\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\AndroidProjects\Fine_Eat\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
-        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-24.2.1_f1ea8575112c9bddc9e333a5559ff0af2b3dd374\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\AndroidProjects\Fine_Eat\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
-        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-24.2.1_1715dd1ccb8be4cca246b6ab1f579817425025f2\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\AndroidProjects\Fine_Eat\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
-        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-24.2.1_e66144c070a342627d6a2b6335e3486d1071fcbe\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\AndroidProjects\Fine_Eat\app\build\intermediates\exploded-aar\com.facebook.fresco\fresco\0.14.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="c77602d43223db798b1ca56cf307ab0ee3c0e63f">
-        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.facebook.fresco-fresco-0.14.1_7d0f92be7cd8f53dd05299ed78218ef4eab6d6c1\classes.dex" />
+        revision="25.0.0"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_34c81f98d934b47643a7b71f1df92c45cda3722a\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -138,6 +111,222 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\Nicholascwz\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-tasks\1.4.0\d85884acf6810a3bbbecb587f239005cbc846dc4\bolts-tasks-1.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\bolts-tasks-1.4.0_166f71085c8f4d7fa2a1b032191d771392c50056\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Nicholascwz\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.7\751f548c85fa49f330cecbb1875893f971b33c4e\gson-2.7.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
+        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\gson-2.7_b8cd0d50086847bab70c6745cd1e89ffa2e3df06\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Nicholascwz\.android\build-cache\772d16047ffcb689d1824f0e0c5931aeea0d7730\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="cf5e2940501f8f7b9175df6491cebb84f5690f14">
+        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_de18b7ba9b84bd901f67cc754cd15babb24bcb92\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Nicholascwz\.android\build-cache\5555d38d5ffa9f9f0389110240575f4f9bc4b365\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_867d3e7a761b4fbfc2c5c5aa81f55d5a2ae801c2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Nicholascwz\.android\build-cache\c7f671008ddde2e5acf9f53504380002e47e30ae\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e5bf70f3683146e4875c006624543cb0a13eac91">
+        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_38e7ca2458c179b451504f96476874d17d90bc58\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Nicholascwz\.android\build-cache\4cda4426fc5fad052728938da3628b5e457fe7ab\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="fef2b3e4b6b1b0e5fe7b69fa137a5fa55a3182ab">
+        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_0c8ecbd6fda561f44b085780d6f98a05cd0de8b5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Nicholascwz\.android\build-cache\769a0127f1d331a8024677120a2513fac069e4d3\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_9f342f400c7697c097f43d0cdf3208c4b4757474\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Nicholascwz\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\adapter-rxjava\2.1.0\693eddc23e87ab13f9cf5001707ce8e7e1d1ff01\adapter-rxjava-2.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="693eddc23e87ab13f9cf5001707ce8e7e1d1ff01">
+        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\adapter-rxjava-2.1.0_aa8b75331fee9b7615fd7cc353aa066ab8bb7f9e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Nicholascwz\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.8.0\5ea7af56cc7c567ed9856d99efb30740e9b17ff\okio-1.8.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="05ea7af56cc7c567ed9856d99efb30740e9b17ff">
+        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\okio-1.8.0_540a0bacb8ec683f4fa34696fc324251f92e7457\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Nicholascwz\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\converter-gson\2.1.0\aa557d71ead91cbf26e0c316a0f593d168303309\converter-gson-2.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="aa557d71ead91cbf26e0c316a0f593d168303309">
+        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\converter-gson-2.1.0_74b779acc5b0070bb268b7596cb0874342e414e8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Nicholascwz\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\adapter-rxjava\2.1.0\693eddc23e87ab13f9cf5001707ce8e7e1d1ff01\adapter-rxjava-2.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="693eddc23e87ab13f9cf5001707ce8e7e1d1ff01">
+        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\adapter-rxjava-2.1.0_aa8b75331fee9b7615fd7cc353aa066ab8bb7f9e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Nicholascwz\.android\build-cache\9c27344ff3576bccd03fd097502603d005a50f4b\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_6372194c8d430ab6b995eea2d66ab5dfc538012f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Nicholascwz\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\retrofit\2.1.0\2de7cd8b95b7021b1d597f049bcb422055119f2c\retrofit-2.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="2de7cd8b95b7021b1d597f049bcb422055119f2c">
+        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\retrofit-2.1.0_c772535d645efdd88119f2aa5b6abc235464adfa\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Nicholascwz\.android\build-cache\f3c75aeeb424aad8d286ef452896e9c2f773e3d0\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8e673cdfadd8f2d98fdb2fda2285c30f6e449782">
+        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_28b9e1da43745038b472958b80c111b1120ddb8a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Nicholascwz\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.3.0\2b802460eea20f8f2ad9c08c74e0f14718e88aa9\okhttp-3.3.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="2b802460eea20f8f2ad9c08c74e0f14718e88aa9">
+        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\okhttp-3.3.0_683e4d61dc1ce90741c6fc34fd247d5472c22888\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Nicholascwz\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.8.0\5ea7af56cc7c567ed9856d99efb30740e9b17ff\okio-1.8.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="05ea7af56cc7c567ed9856d99efb30740e9b17ff">
+        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\okio-1.8.0_540a0bacb8ec683f4fa34696fc324251f92e7457\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Nicholascwz\.android\build-cache\c4910bd62caab96dd7a7f88c34a9c9b32d0c6a0a\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5a2386ad9bfff580b206a7fe305cdccd00798159">
+        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_f57ff7bee1db423de8777f781c963c56915f5f7b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Nicholascwz\.gradle\caches\modules-2\files-2.1\io.reactivex\rxjava\1.1.6\2586312cd2b8a511e4c6236736f5a039fc0f2273\rxjava-1.1.6.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="2586312cd2b8a511e4c6236736f5a039fc0f2273">
+        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\rxjava-1.1.6_aa918946dccdbed7b2bf674f11c7c528fac2fd24\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\AndroidProjects\Fine_Eat\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e755f0890f81487f1f5aa9a3aac58cbe89062b0e">
+        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_740a83782ec39f0ff336f7a3b4c5ba58d2fded3e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Nicholascwz\.android\build-cache\261c59658aebf844036b5ccf90a870a2a570a67b\output\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_4c402c1c5ceb05158efa2e2c8b3124d78caec8f1\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Nicholascwz\.android\build-cache\b020c372bb054722532c34c8c521ecf420edf02e\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
+        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_9dd8acdda0aeff8fd4c70678a8db2e1671168028\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Nicholascwz\.android\build-cache\548cd4d5764e90c593033e799e8d7ba36ea13a8b\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
+        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_2688d84814206b77ef03ed54dafa27f3cd22841f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Nicholascwz\.android\build-cache\6d5de633afb11e5b2be0e209f75eb29845b2dc56\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="65d086ee9daaf87b5af62ad24471edafa433354c">
+        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_9d36f8b98a0e0d58a41e898554580482cd1800c7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Nicholascwz\.android\build-cache\5dd7650be97935a95fddeb0870be9b89c2683dd6\output\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_84cba1f96186d6709d2bf5b8b85f0cab507c6642\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\Nicholascwz\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.2.1\support-annotations-24.2.1.jar"
         jumboMode="true"
         optimize="true"
@@ -147,111 +336,39 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\AndroidProjects\Fine_Eat\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jar="C:\Users\Nicholascwz\.android\build-cache\a6efaa936154379f469a478eee235a2fc0f84b08\output\jars\classes.jar"
         jumboMode="true"
         optimize="true"
-        revision="24.0.3"
-        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
-        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_37ff4090490cc4ea09b7b8276606bf32df527ac8\classes.dex" />
+        revision="25.0.0"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_0bff815b632e2af767fc2c005c9bbd3153334f35\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\AndroidProjects\Fine_Eat\app\build\intermediates\exploded-aar\com.facebook.fresco\fbcore\0.14.1\jars\classes.jar"
+        jar="C:\Users\Nicholascwz\.android\build-cache\97e661535bb20264f95c2e049ab85a9c7274a815\output\jars\classes.jar"
         jumboMode="true"
         optimize="true"
-        revision="24.0.3"
-        sha1="e5bf70f3683146e4875c006624543cb0a13eac91">
-        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.facebook.fresco-fbcore-0.14.1_74e57ebaa3f45523b6181eb7d51ff950d7925114\classes.dex" />
+        revision="25.0.0"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_c55f47c34938cf3f6c105348f85e488b60c73db1\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\AndroidProjects\Fine_Eat\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jar="C:\Users\Nicholascwz\.android\build-cache\a6efaa936154379f469a478eee235a2fc0f84b08\output\jars\libs\internal_impl-24.2.1.jar"
         jumboMode="true"
         optimize="true"
-        revision="24.0.3"
-        sha1="677adae627c405c2f26d9b62c31ecf24d17ba183">
-        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_bf9f80132c6432b2c17ae2bd9f679c669714f84a\classes.dex" />
+        revision="25.0.0"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_d6aa9300e87c4149775b28f470379de2fad0134e\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\AndroidProjects\Fine_Eat\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\classes.jar"
+        jar="C:\Users\Nicholascwz\.android\build-cache\2be766e14f8d35efb649f32e65654bdc7c517adc\output\jars\libs\internal_impl-24.2.1.jar"
         jumboMode="true"
         optimize="true"
-        revision="24.0.3"
-        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
-        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-24.2.1_e03b32e1d3acf3fb32a17e587bbd4c2e7046ba63\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\AndroidProjects\Fine_Eat\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="39aaecf072e9b59238dedaa8460e3e4e1b4dde32">
-        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_740a83782ec39f0ff336f7a3b4c5ba58d2fded3e\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\AndroidProjects\Fine_Eat\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
+        revision="25.0.0"
         sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
-        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_d0dce505588d5ae0b7e144ff57ff8c0bed95773f\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\AndroidProjects\Fine_Eat\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline\0.14.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="8795af3e130206443f2d5ed45f1b26067aff70dc">
-        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.facebook.fresco-imagepipeline-0.14.1_fed2848e55b22adf374b0a6cb32ebad642b42586\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\AndroidProjects\Fine_Eat\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="c5e6490573cd2cc8018417f60ddd251138b6ed61">
-        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-cardview-v7-24.2.1_6b7899e71e175df736636827be88670228fdcf5a\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\AndroidProjects\Fine_Eat\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\8.4.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="fef2b3e4b6b1b0e5fe7b69fa137a5fa55a3182ab">
-        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-base-8.4.0_694213efb4704583f1eb9f22cf4a894fb599dd80\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\AndroidProjects\Fine_Eat\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.4.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="65d086ee9daaf87b5af62ad24471edafa433354c">
-        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-appindexing-8.4.0_9bd9cfa0dfb2696ad0d3aa064f3ec39ff8d19ae4\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\AndroidProjects\Fine_Eat\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\libs\internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="867dad63c33388ff8c7644b236579355036d075f">
-        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_a6116fbe97af9ce22356695c48e52f57726745d3\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\AndroidProjects\Fine_Eat\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline-base\0.14.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="b881010e06dc39be15b7465cd16492eedbab246f">
-        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.facebook.fresco-imagepipeline-base-0.14.1_4ae05f9cac0d5a214d15ac16abbb9f715c79ab01\classes.dex" />
+        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_c37f19cddb7b38f117ae57d709105cd3a7525c3c\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -273,66 +390,30 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\AndroidProjects\Fine_Eat\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\jars\classes.jar"
+        jar="C:\Users\Nicholascwz\.android\build-cache\261c59658aebf844036b5ccf90a870a2a570a67b\output\jars\classes.jar"
         jumboMode="true"
         optimize="true"
-        revision="24.0.3"
-        sha1="8e673cdfadd8f2d98fdb2fda2285c30f6e449782">
-        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-basement-8.4.0_ca1a96c3719e91f4b5888fcaf04841378efc38c2\classes.dex" />
+        revision="25.0.0"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_bf63e5d71116b57f7565b08a2ee882794016fb50\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\AndroidProjects\Fine_Eat\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jar="C:\Users\Nicholascwz\.android\build-cache\c3e819b49b95aacd065da90d1f3f46e27330db5a\output\jars\classes.jar"
         jumboMode="true"
         optimize="true"
-        revision="24.0.3"
-        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
-        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_25e9db628b27f78a931d3dd1077ad8a86f8dfe66\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\AndroidProjects\Fine_Eat\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
+        revision="25.0.0"
         sha1="d5c731fc64c03dfe04d51134955b483551c35849">
-        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-24.2.1_a5a0981813ec4834895f2fb339ea64f6ee68e8a6\classes.dex" />
+        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_685227ded14dcbf89dfba98c0d05faa7e14ca830\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\AndroidProjects\Fine_Eat\app\build\intermediates\exploded-aar\io.reactivex\rxandroid\1.2.1\jars\classes.jar"
+        jar="C:\Users\Nicholascwz\.android\build-cache\11ca5c63d8ee0ede747047ee36403756c094918d\output\jars\classes.jar"
         jumboMode="true"
         optimize="true"
-        revision="24.0.3"
-        sha1="5a2386ad9bfff580b206a7fe305cdccd00798159">
-        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\io.reactivex-rxandroid-1.2.1_883c37b35a1f9763b236ae9e531ebc2b9a9a516d\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\AndroidProjects\Fine_Eat\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
-        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-24.2.1_3762e1a5722419e383b0746123c1f5b71dd21dae\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Nicholascwz\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.8.0\5ea7af56cc7c567ed9856d99efb30740e9b17ff\okio-1.8.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="05ea7af56cc7c567ed9856d99efb30740e9b17ff">
-        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\okio-1.8.0_540a0bacb8ec683f4fa34696fc324251f92e7457\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\AndroidProjects\Fine_Eat\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
-        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-24.2.1_f022b222119b7f023978498e4ae613023b2ce1f2\classes.dex" />
+        revision="25.0.0"
+        sha1="c77602d43223db798b1ca56cf307ab0ee3c0e63f">
+        <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_66121f0439c91db1848eb382a467f5229b1aae6b\classes.dex" />
     </item>
 
 </items>

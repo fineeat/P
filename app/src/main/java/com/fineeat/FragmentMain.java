@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,35 +21,31 @@ import model.Company;
  */
 public class FragmentMain extends Fragment {
     RecyclerView recyclerView;
+    View fragmentMain;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View fragmentMain = inflater.inflate(R.layout.fragment_main, container, false);
-        initViews(fragmentMain);
+        fragmentMain = inflater.inflate(R.layout.fragment_main, container, false);
+        initViews();
 
         return fragmentMain;
     }
 
-    @Override
-    public void onStart() {
-        super.onStart();
-        refresh();
-    }
-
-    public void initViews(View fragmain){
-        recyclerView = (RecyclerView)fragmain.findViewById(R.id.cardRecyclerViewMain);
+    public void initViews(){
+        recyclerView = (RecyclerView)fragmentMain.findViewById(R.id.cardRecyclerViewMain);
         recyclerView.setHasFixedSize(true);
-        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(fragmain.getContext(), 1);
+        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(fragmentMain.getContext(), 1);
         recyclerView.setLayoutManager(layoutManager);
 
-        RecycleViewAdapterPromo adapter = new RecycleViewAdapterPromo(fragmain.getContext(), Company.promos);
+        RecycleViewAdapterPromo adapter = new RecycleViewAdapterPromo(fragmentMain.getContext(), Company.promos);
         recyclerView.setAdapter(adapter);
     }
 
     public void refresh()
     {
+        Log.d("Refresh","FragMain");
         recyclerView.getAdapter().notifyDataSetChanged();
     }
 }

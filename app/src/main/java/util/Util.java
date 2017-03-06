@@ -5,6 +5,5 @@ package util;
  */
 
 public class Util {
-    public static String BaseURL = "http://192.168.1.51:8888/";
-
+    public static String BaseURL = "http://www.fine-eat.com/";
 }
