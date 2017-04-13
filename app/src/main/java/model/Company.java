@@ -13,6 +13,7 @@ import java.util.HashMap;
 
 public class Company {
     public static FEUser loggedUser;
+    public static boolean importStatusRestaurant;
 
     public static ArrayList<FECategory> categories = new ArrayList<>();
     public static ArrayList<FECuisine> cuisines = new ArrayList<>();
@@ -175,4 +176,14 @@ public class Company {
 
         return user;
     }
+
+    //Import statuses method
+    public static void resetImportStatus(){
+        setImportStatusRestaurant(false);
+    }
+
+    public static void setImportStatusRestaurant(boolean importStatusRestaurant) {
+        Company.importStatusRestaurant = importStatusRestaurant;
+    }
+
 }

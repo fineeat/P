@@ -161,13 +161,15 @@ public class FERestaurant {
            strings.add(rescat.categoryName);
         }
 
-        //Sort strings before displaying
-        Collections.sort(strings, new Comparator<String>() {
-            @Override
-            public int compare(String str1, String str2) {
-                return str1.compareTo(str2);
-            }
-        });
+        if(strings.size() > 1) {
+            //Sort strings before displaying
+            Collections.sort(strings, new Comparator<String>() {
+                @Override
+                public int compare(String str1, String str2) {
+                    return str1.compareTo(str2);
+                }
+            });
+        }
 
         return  TextUtils.join(", ", strings);
     }
@@ -180,13 +182,15 @@ public class FERestaurant {
             strings.add(rescui.cuisineName);
         }
 
-        //Sort strings before displaying
-        Collections.sort(strings, new Comparator<String>() {
-            @Override
-            public int compare(String str1, String str2) {
-                return str1.compareTo(str2);
-            }
-        });
+        if(strings.size() > 1) {
+            //Sort strings before displaying
+            Collections.sort(strings, new Comparator<String>() {
+                @Override
+                public int compare(String str1, String str2) {
+                    return str1.compareTo(str2);
+                }
+            });
+        }
 
         return  TextUtils.join(", ", strings);
     }

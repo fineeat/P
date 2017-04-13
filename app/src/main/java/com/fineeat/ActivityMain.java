@@ -65,16 +65,18 @@ public class ActivityMain extends AppCompatActivity {
                 toast.show();
             }
         });
+        
+
 
         //User TODO: Implement login in the future
         Company.createUser();
         //Loading data
-        //Category
+        /*/Category
         ImportMethod.ImportCategories();
         //Cuisine
         ImportMethod.ImportCuisines();
         //Restaurant
-        ImportMethod.ImportRestaurant();
+        ImportMethod.ImportRestaurant();*/
 
 
         // ATTENTION: This was auto-generated to implement the App Indexing API.

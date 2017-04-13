@@ -116,6 +116,7 @@ public class ImportMethod {
 
                 //Import Promo after restaurant
                 ImportPromo();
+                Company.setImportStatusRestaurant(true);
             }
 
             @Override
@@ -148,6 +149,7 @@ public class ImportMethod {
 
                 call.cancel(); // to cancel a running request call.cancel();
                 Log.v("ImportPromo", "Finish importing");
+
             }
 
             @Override
