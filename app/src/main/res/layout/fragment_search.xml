@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     tools:context="com.fineeat.FragmentSearch">
 
-    <LinearLayout
+    <!--<LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/searchFilters">
@@ -25,15 +25,14 @@
             android:background="@color/colorPrimary"
             android:text="@string/cuisine"
             android:layout_toRightOf="@+id/buttonCategory"/>
-    </LinearLayout>
+    </LinearLayout>-->
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/cardRecyclerViewSearch"
         android:scrollbars="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/cardViewBackground"
-        android:layout_below="@+id/searchFilters">
+        android:background="@color/cardViewBackground">
     </android.support.v7.widget.RecyclerView>
 
 </RelativeLayout>

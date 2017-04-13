@@ -3,6 +3,7 @@ package com.fineeat;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.GridLayoutManager;
@@ -24,7 +25,7 @@ import model.Company;
  */
 public class FragmentSearch extends Fragment {
     RecyclerView recyclerView;
-    Button buttonCategory, buttonCuisine;
+    //Button buttonCategory, buttonCuisine;
     View fragmentSearch;
 
     @Override
@@ -34,11 +35,11 @@ public class FragmentSearch extends Fragment {
         fragmentSearch = inflater.inflate(R.layout.fragment_search, container, false);
 
         initRecyclerView();
-        initButtons();
 
         return fragmentSearch;
     }
 
+    /* Code to display filter buttons
     public void initButtons(){
         buttonCategory = (Button)fragmentSearch.findViewById(R.id.buttonCategory);
         buttonCuisine = (Button)fragmentSearch.findViewById(R.id.buttonCuisine);
@@ -92,7 +93,7 @@ public class FragmentSearch extends Fragment {
         });
 
         return builder.create();
-    }
+    }*/
 
     public void initRecyclerView(){
         recyclerView = (RecyclerView)fragmentSearch.findViewById(R.id.cardRecyclerViewSearch);
@@ -102,6 +103,9 @@ public class FragmentSearch extends Fragment {
 
         RecycleViewAdapterSearch adapter = new RecycleViewAdapterSearch(fragmentSearch.getContext(), Company.restaurants);
         recyclerView.setAdapter(adapter);
+
+        //Hide FAB on scroll
+        ((ActivityMain)getActivity()).hideFABOnScroll(recyclerView);
     }
 
     public void refresh()

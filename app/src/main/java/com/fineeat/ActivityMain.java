@@ -10,6 +10,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
@@ -65,19 +66,11 @@ public class ActivityMain extends AppCompatActivity {
                 toast.show();
             }
         });
-        
+
 
 
         //User TODO: Implement login in the future
         Company.createUser();
-        //Loading data
-        /*/Category
-        ImportMethod.ImportCategories();
-        //Cuisine
-        ImportMethod.ImportCuisines();
-        //Restaurant
-        ImportMethod.ImportRestaurant();*/
-
 
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -169,21 +162,30 @@ public class ActivityMain extends AppCompatActivity {
 
             @Override
             public void onPageSelected(int position) {
+                //Hide FAB for certain tab
+                FloatingActionButton fab = (FloatingActionButton)findViewById(R.id.fab);
+
                 switch (position){
                     case 0:
                         FragmentMain fragmain = (FragmentMain)viewPagerAdapter.getItem(position);
                         fragmain.refresh();
+                        fab.setVisibility(FloatingActionButton.VISIBLE);//Hide FAB for certain tab
                         break;
                     case 1:
                         FragmentSearch fragsearch = (FragmentSearch) viewPagerAdapter.getItem(position);
                         fragsearch.refresh();
+                        fab.setVisibility(FloatingActionButton.VISIBLE);//Hide FAB for certain tab
                         break;
                     case 2:
                         FragmentFavourite fragfav = (FragmentFavourite)viewPagerAdapter.getItem(position);
                         fragfav.refresh();
+                        fab.setVisibility(FloatingActionButton.INVISIBLE);//Hide FAB for certain tab
+                        break;
+                    case 3:
+                        fab.setVisibility(FloatingActionButton.INVISIBLE);//Hide FAB for certain tab
                         break;
                 }
-                Log.d("Fragment Visible", ""+position);
+                Log.d("Fragment Visible", "" + position );
             }
 
             @Override
@@ -227,6 +229,25 @@ public class ActivityMain extends AppCompatActivity {
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         AppIndex.AppIndexApi.end(client, getIndexApiAction());
         client.disconnect();
+    }
+
+    public void hideFABOnScroll(RecyclerView recyclerView){
+        //Hide FAB on scroll
+        recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener(){
+            @Override
+            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+                super.onScrolled(recyclerView, dx, dy);
+                FloatingActionButton fab = (FloatingActionButton)findViewById(R.id.fab);
+
+                if(dy > 0 && fab.isShown()){
+                    fab.setVisibility(FloatingActionButton.INVISIBLE);
+                }
+                else if(dy < 0 && !fab.isShown()){
+                    fab.setVisibility(FloatingActionButton.VISIBLE);
+
+                }
+            }
+        });
     }
 
 }

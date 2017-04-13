@@ -2,6 +2,7 @@ package com.fineeat;
 
 
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -41,6 +42,9 @@ public class FragmentMain extends Fragment {
 
         RecycleViewAdapterPromo adapter = new RecycleViewAdapterPromo(fragmentMain.getContext(), Company.promos);
         recyclerView.setAdapter(adapter);
+
+        //Hide FAB on scroll
+        ((ActivityMain)getActivity()).hideFABOnScroll(recyclerView);
     }
 
     public void refresh()
