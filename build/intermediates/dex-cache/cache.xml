@@ -106,7 +106,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="c973df308b3ba5c57126d3ce6390097e3a875f4a">
+        sha1="cee2c468d1a1b50f280fba045f7bccd4b6463ed1">
         <dex dex="C:\AndroidProjects\Fine_Eat\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_740a83782ec39f0ff336f7a3b4c5ba58d2fded3e\classes.dex" />
     </item>
     <item

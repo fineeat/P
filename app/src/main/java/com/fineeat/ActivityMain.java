@@ -67,8 +67,6 @@ public class ActivityMain extends AppCompatActivity {
             }
         });
 
-
-
         //User TODO: Implement login in the future
         Company.createUser();
 

@@ -2,6 +2,7 @@ package com.fineeat;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.PixelFormat;
 import android.os.Bundle;
 import android.util.Log;
@@ -13,7 +14,7 @@ import android.widget.ImageView;
 import data.ImportMethod;
 import model.Company;
 
-public class SplashScreenActivity extends Activity {
+public class ActivitySplashScreen extends Activity {
     public void onAttachedToWindow() {
         super.onAttachedToWindow();
         Window window = getWindow();
@@ -26,6 +27,7 @@ public class SplashScreenActivity extends Activity {
         getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splashscreen);
+        getWindow().setStatusBarColor(Color.parseColor("#1b1c1b"));
         StartAnimations();
     }
     private void StartAnimations() {
@@ -61,16 +63,16 @@ public class SplashScreenActivity extends Activity {
                         Log.v("Wait", "Import status: " + Company.importStatusRestaurant + " - Duration waited: " + waited);
                     }
                     //ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(SplashScreenActivity.this);
-                    Intent intent = new Intent(SplashScreenActivity.this, ActivityMain.class);
+                    Intent intent = new Intent(ActivitySplashScreen.this, ActivityMain.class);
                     //intent.putExtra("anim_type", "ExplodeJava");
                     //intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                     //startActivity(intent, options.toBundle());
                     startActivity(intent);
-                    SplashScreenActivity.this.finish();
+                    ActivitySplashScreen.this.finish();
                 } catch (InterruptedException e) {
                     // do nothing
                 } finally {
-                    SplashScreenActivity.this.finish();
+                    ActivitySplashScreen.this.finish();
                 }
 
             }
